@@ -38,41 +38,35 @@ body{height:100%;overflow-y:scroll;}
 
 /* 자주가는 매장 */
 .main_favorite_store{margin:6.9444vw 0;}
-.main_favorite_store .store_list li{margin-bottom:6.3889vw;}
-.main_favorite_store .store_list a{position:relative;display:flex;}
-.main_favorite_store .store_list .thumb_img{position:relative;width:27.0833vw;height:27.0833vw;margin-right:4.7222vw;border-radius:5.5556px;overflow:hidden;}
-.main_favorite_store .store_list .thumb_img img{width:100%;}
-.main_favorite_store .store_list .thumb_img .mark{position:absolute;top:2.2222vw;left:2.2222vw;width:4.1667vw;height:3.75vw;background:url("../../images/common/icon_favorite_on.svg") no-repeat 0 0/100%;}
-.main_favorite_store .store_list .thumb_img .mark.on{background:url("../../images/common/icon_favorite.svg") no-repeat 0 0/100%;box-shadow:0px 10px 30px 0px rgba(0,0,0,0.3);}
-.main_favorite_store .store_list .text_wrap{width:56.9444vw;}
-.main_favorite_store .store_list .text_wrap .title{display:flex;justify-content:space-between;font-size:3.6111vw;font-weight:700;color:#222;}
-.main_favorite_store .store_list .text_wrap .title .distance{color:#093968;}
-.main_favorite_store .store_list .text_wrap .desc{display:flex;flex-wrap:wrap;font-size:3.3333vw;color:#222;}
-.main_favorite_store .store_list .text_wrap .desc dt{width:10%;margin-top:1.3889vw;}
-.main_favorite_store .store_list .text_wrap .desc dt img{width:3.3333vw;}
-.main_favorite_store .store_list .text_wrap .desc dd{width:90%;margin-top:1.3889vw;}
 
 /* 이벤트 배너 */
 .main_event_banner li{margin-bottom:5.5556vw;}
 
 /* 내주변 매장 포트폴리오 */
-.main_section_portfolio{background:#fff;padding:16vw 0;}
-.portfolio_wrap{}
-.portfolio_wrap .portfolio_tab{display:flex;justify-content:space-between;flex-wrap:wrap;margin-bottom:8vw;}
-.portfolio_wrap .portfolio_tab li{text-align:center;cursor:pointer;font-size:3.733vw;color:#999;background:#F0F0F0;padding:1.7vw 3.8vw;border-radius:18px;}
-.portfolio_wrap .portfolio_tab li:hover,
-.portfolio_wrap .portfolio_tab li.on{color:#fff;font-weight:500;background:#222;}
-.portfolio_wrap .content{display:none;}
-.portfolio_wrap .content.on{display:block;}
-.portfolio_wrap .portfolio_content li{margin-bottom:6.4vw;}
-.portfolio_wrap .portfolio_content li figure{position:relative;border-radius:4px;overflow:hidden;}
-.portfolio_wrap .portfolio_content li figure img{width:100%;}
-.portfolio_wrap .portfolio_content li figure .text{position:absolute;bottom:0;left:0;width:100%;background:rgba(0, 0, 0, .15);padding:2.7vw 1vw 2.5vw 1vw;font-size:3.733vw;color:#fff;text-align:center;} 
+.section_tab{background:#fff;padding:16vw 0;}
+.tab_wrap .tab_li{display:flex;justify-content:space-between;flex-wrap:wrap;margin-bottom:8vw;}
+.tab_wrap .tab_li li{text-align:center;cursor:pointer;font-size:3.733vw;color:#999;background:#F0F0F0;padding:1.7vw 3.8vw;border-radius:18px;}
+.tab_wrap .tab_li li:hover,
+.tab_wrap .tab_li li.on{color:#fff;font-weight:500;background:#222;}
+.tab_wrap .content{display:none;}
+.tab_wrap .content.on{display:block;}
 
 
 /****************** 서브 내용 ******************/
-/* 서브컨텐츠 */
-
+/* 매장리스트 */
+.store_list li{margin-bottom:6.3889vw;}
+.store_list a{position:relative;display:flex;}
+.store_list .thumb_img{position:relative;width:27.0833vw;height:27.0833vw;margin-right:4.7222vw;border-radius:5.5556px;overflow:hidden;}
+.store_list .thumb_img img{width:100%;}
+.store_list .thumb_img .mark{position:absolute;top:2.2222vw;left:2.2222vw;width:4.1667vw;height:3.75vw;background:url("../../images/common/icon_favorite_on.svg") no-repeat 0 0/100%;}
+.store_list .thumb_img .mark.on{background:url("../../images/common/icon_favorite.svg") no-repeat 0 0/100%;box-shadow:0px 10px 30px 0px rgba(0,0,0,0.3);}
+.store_list .text_wrap{width:56.9444vw;}
+.store_list .text_wrap .title{display:flex;justify-content:space-between;font-size:3.6111vw;font-weight:700;color:#222;}
+.store_list .text_wrap .title .distance{color:#093968;}
+.store_list .text_wrap .desc{display:flex;flex-wrap:wrap;font-size:3.3333vw;color:#222;}
+.store_list .text_wrap .desc dt{width:10%;margin-top:1.3889vw;}
+.store_list .text_wrap .desc dt img{width:3.3333vw;}
+.store_list .text_wrap .desc dd{width:90%;margin-top:1.3889vw;}
 
 /* 최근본매장 */
 /* .container .store_list{padding-top:10.667vw;}
@@ -90,7 +84,7 @@ body{height:100%;overflow-y:scroll;}
 .container .store_list li .content_wrap .btn_del{position:absolute;top:0;right:0;width:4.8vw;height:4.8vw;background:url("../../images/common/icon_close.png") no-repeat 0 0/100%;} */
 
 /* 최근본매장, 내주변 지도로 보기 - 레이어팝업 */
-.pop_wrap{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.7);opacity:0;visibility:hidden;z-index:-1;transition:opacity 200ms 200ms ease, transform 300ms 250ms ease}
+/* .pop_wrap{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.7);opacity:0;visibility:hidden;z-index:-1;transition:opacity 200ms 200ms ease, transform 300ms 250ms ease}
 .pop_wrap.active{opacity:1;z-index:1998;visibility:visible;overflow:auto;-webkit-overflow-scrolling:touch;}
 .pop_wrap .pop_inner{width:100%;min-height:100%;display:flex;justify-content:center;align-items:center;box-sizing:border-box}
 .pop_wrap .pop_content{position:relative;width:85.333vw;padding:3.2vw 2vw;font-size:3.733vw;line-height:1.3;text-align:center;box-shadow:3px 3px 20px 0 rgba(0,0,0,.07);border-radius:8px;background-color:#fff;}
@@ -98,7 +92,7 @@ body{height:100%;overflow-y:scroll;}
 .pop_wrap .btn_wrap{display:flex;justify-content:center;margin-top:3vw;}
 .pop_wrap .btn_wrap .btn_cancle{display:block;width:38vw;padding:3.6vw 0;margin-right:2vw;background:#F0F0F0;color:#222;border-radius:8px;}
 .pop_wrap .btn_wrap .btn_confirm{display:block;width:38vw;padding:3.6vw 0;background:#FF781E;color:#fff;border-radius:8px;}
-.pop_wrap .btn_wrap .btn_confirm.type2{width:96%;padding:3.6vw 0;}
+.pop_wrap .btn_wrap .btn_confirm.type2{width:96%;padding:3.6vw 0;} */
 
 /* 위치지정 */
 .location_warp{position:relative;}
@@ -122,12 +116,12 @@ body{height:100%;overflow-y:scroll;}
 .address_search_wrap .add_search .btn_cancle{position:absolute;top:3.8vw;right:3.2vw;width:4.8vw;height:4.8vw;background:url("../../images/common/icon_close.png") no-repeat 0 0/100%;} */
 
 /* 주소검색 - 최근검색 */
-.recently_search_wrap{padding:10.667vw 0;}
+/* .recently_search_wrap{padding:10.667vw 0;}
 .recently_search_wrap .text{position:relative;border-bottom:1px solid #1a1a1a;padding-bottom:3.2vw;}
 .recently_search_wrap .text p{font-size:4.267vw;font-weight:700;color:#222;}
 .recently_search_wrap .text .btn_alldel{position:absolute;top:-1.2vw;right:0;font-size:3.2vw;padding:3vw;}
 .recently_search_wrap .recently_list li{position:relative;border-bottom:1px solid #EDEDED;padding:4.8vw 0;font-size:3.733vw;}
-.recently_search_wrap .recently_list .btn_delete{position:absolute;top:5vw;right:0;width:4.8vw;height:4.8vw;background:url("../../images/common/icon_close.png") no-repeat 0 0/100%;}
+.recently_search_wrap .recently_list .btn_delete{position:absolute;top:5vw;right:0;width:4.8vw;height:4.8vw;background:url("../../images/common/icon_close.png") no-repeat 0 0/100%;} */
 
 /* 주소검색 - 지역검색시 */
 .area_search_wrap{padding:10.667vw 0;}

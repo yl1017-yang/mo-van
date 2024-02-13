@@ -22,13 +22,6 @@ $(function () {
 	});
 
 
-	// 서브상단 : 내주변 카테고리
-	var sliderCategory = new Swiper('.local_category', {
-		slidesPerView: 3,
-		spaceBetween: 0,
-		nested: true,
-	});
-
 	// 서브 : 내주변 - 지도보기 리스트
 	var sliderPremium = new Swiper('.slider_map_list', {
 		slidesPerView: 1.2,
@@ -46,10 +39,10 @@ $(function () {
 
 
 $(function () {
-	// 메인 : 내주변 매장 포트폴리오 탭메뉴
-	$(".portfolio_wrap .portfolio_tab li").click(function () {
-		$(".portfolio_wrap .portfolio_tab li").removeClass('on');
-		$(".portfolio_wrap .content").removeClass('on');
+	// 탭메뉴
+	$(".tab_wrap .tab_li li").click(function () {
+		$(".tab_wrap .tab_li li").removeClass('on');
+		$(".tab_wrap .content").removeClass('on');
 		$(this).addClass('on');
 		$("#" + $(this).data('id')).addClass('on');
 	});
