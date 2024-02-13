@@ -7,29 +7,14 @@ body{height:100%;overflow-y:scroll;}
 .inner{margin:0 5.5556vw;}
 .container{padding-top:22.7778vw;min-height:100%;} /* 세로 100% - 상단패딩 16vw */
 
+.btn{width:10vw;height:10vw;box-shadow:0px 2px 4px 0px rgba(0,0,0,0.3);border-radius:3.3333vw;}
 /****************** 상단 ******************/
 /* 헤더 */
 .header{position:fixed;top:0;left:0;width:100%;height:15.8333vw;background:#fff;display:flex;flex-wrap:wrap;align-content:center;z-index:10;}
 .header .inner{position:relative;width:100%;margin:2.2222vw 5.5556vw 0 5.5556vw;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;}
 .header .logo{width:16.6667vw;height:13.6111vw;background:url("../../images/common/logo.svg") no-repeat 0 0/100%;}
 .header .id{width:10vw;height:10vw;box-shadow:0px 10px 30px 0px rgba(255,197,41,0.3);}
-
-/* 서브헤더 */
-.sub_header{position:fixed;top:0;left:0;width:100%;min-height:16vw;padding:4vw 0;background:#fff;display:flex;align-content:center;flex-wrap:wrap;border-bottom:1px solid #EDEDED;z-index:100;}
-.sub_header .inner{position:relative;width:100%;margin:0 6.4vw 0 6.4vw;display:flex;flex-wrap:wrap;align-content:center;}
-.sub_header .btn_back{display:block;width:6.4vw;height:6.4vw;background:url("../../images/common/icon_arrow_prev.png") no-repeat 0 0/100%;}
-.sub_header .btn_alldel{position:absolute;top:-1vw;right:0;font-size:3.2vw;padding:3vw;}
-.sub_header .sub_title{position:relative;display:block;font-size:5.333vw;font-weight:700;color:#1A1A1A;margin-left:2vw;}
-.sub_header .sub_title .loca_arrow img{width:2.667vw;}
-.sub_header .btn_map{position:absolute;top:1vw;right:0;width:6.4vw;height:6.4vw;background:url("../../images/common/icon_loca_map.png") no-repeat 0 0/100%;}
-.sub_header .btn_list{position:absolute;top:1vw;right:0;width:6.4vw;height:6.4vw;background:url("../../images/common/icon_loca_list.png") no-repeat 0 0/100%;}
-
-/* 서브헤더 - 내주변 카테고리  */
-.sub_header .local_category{position:relative;width:100%;display:flex;padding:0 6.4vw;} 
-.local_category .swiper-slide{position:relative;display:flex;width:auto !important;margin-right:4vw;} 
-.local_category .swiper-slide a{position:relative;display:inline-block;font-size:3.2vw;color:#1A1A1A;border:1px solid #E0E0E0;border-radius:20px;padding:2.4vw 6.667vw 2.4vw 2.667vw;margin-top:3.8vw;}
-.local_category .swiper-slide a:after{content:'';position:absolute;top:2.7vw;right:2vw;width:2.667vw;height:2.667vw;background:url("../../images/common/icon_arrow_down.png") no-repeat 0 0/100%;}
-.local_category .swiper-slide .desc{display:inline-block;font-weight:700;color:#FF781E;margin-left:0.5vw;}
+.header .btn_menu_open{background:url("../../images/common/icon_menu.svg") no-repeat 50% 50%/3.4722vw 3.0556vw;}
 
 /* 검색 */
 .search_wrap{position:relative;width:100%;height:100%;}
@@ -59,8 +44,8 @@ body{height:100%;overflow-y:scroll;}
 .main_favorite_store .store_list a{position:relative;display:flex;}
 .main_favorite_store .store_list .thumb_img{position:relative;width:27.0833vw;height:27.0833vw;margin-right:4.7222vw;border-radius:5.5556px;overflow:hidden;}
 .main_favorite_store .store_list .thumb_img img{width:100%;}
-.main_favorite_store .store_list .thumb_img .mark{position:absolute;top:2.2222vw;left:2.2222vw;width:4.1667vw;height:3.75vw;background:url("../../images/common/icon_favorite.svg") no-repeat 0 0/100%;}
-.main_favorite_store .store_list .thumb_img .mark.on{background:url("../../images/common/icon_favorite_on.svg") no-repeat 0 0/100%;}
+.main_favorite_store .store_list .thumb_img .mark{position:absolute;top:2.2222vw;left:2.2222vw;width:4.1667vw;height:3.75vw;background:url("../../images/common/icon_favorite_on.svg") no-repeat 0 0/100%;}
+.main_favorite_store .store_list .thumb_img .mark.on{background:url("../../images/common/icon_favorite.svg") no-repeat 0 0/100%;box-shadow:0px 10px 30px 0px rgba(0,0,0,0.3);}
 .main_favorite_store .store_list .text_wrap{width:56.9444vw;}
 .main_favorite_store .store_list .text_wrap .title{display:flex;justify-content:space-between;font-size:3.6111vw;font-weight:700;color:#222;}
 .main_favorite_store .store_list .text_wrap .title .distance{color:#093968;}
