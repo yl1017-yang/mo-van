@@ -1,73 +1,77 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-<meta charset="utf-8">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta http-equiv="imagetoolbar" content="no">
-<meta name="format-detection" content="telephone=no">
-<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
-<title>펫미</title>
-<link rel="stylesheet" href="../resources/css/common.css">
-<link rel="stylesheet" href="../resources/css/layout.css">
-<link rel="stylesheet" href="../resources/css/main.css">
-<script src="../resources/js/jquery-3.4.1.js"></script>
-<script src="../resources/js/common.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <title>VAN</title>
+    <link rel="stylesheet" href="../resources/css/common.css">
+    <link rel="stylesheet" href="../resources/css/contents.css">
+    <link rel="stylesheet" href="../resources/css/swiper.min.css">
 </head>
+
 <body>
 
-<div class="wrap" id="wrap">
-    <!-- 서브타이틀 -->
-    <header class="sub_header">
-        <div class="inner">
-            <a href="../main/index.html" class="btn_back"><span class="blind">뒤로가기</span></a>
-            <a href="#" class="sub_title">위치지정</a>
-        </div>
-    </header>
-    <!-- //서브타이틀 -->
+    <div class="wrap" id="wrap">
+        <!-- 서브타이틀 -->
+        <header class="sub_header">
+            <div class="inner">
+                <a href="../main/index.html" class="btn_back"><span class="blind">뒤로가기</span></a>
+                <a href="#" class="sub_title">위치지정</a>
+            </div>
+        </header>
+        <!-- //서브타이틀 -->
 
-    <!-- 본문내용 -->
-    <div class="container sub_content">
-        <!-- 위치지정 지도 -->
-        <section class="location_warp">
-            
-            <!-- 주소검색 -->
-            <div class="add_search">
-                <form id="totalSearchForm" name="search" method="post"></form>
+        <!-- 본문내용 -->
+        <main class="container sub_content">
+            <!-- 위치지정 지도 -->
+            <section class="location_warp">
+
+                <!-- 주소검색 -->
+                <div class="add_search">
+                    <form id="totalSearchForm" name="search" method="post"></form>
                     <button type="button" id="totalSearch" title="전체검색" class="btn_allsearch" onclick="javascript:totalSearch();"><span class="blind">전체검색</span></button>
                     <fieldset>
                         <legend>주소검색 폼</legend>
                         <input type="text" name="s" value="" title="검색어를 입력" placeholder="주소를 검색해보세요." class="search_result">
                     </fieldset>
-                </form>
-            </div>
-            <!-- //주소검색 -->
+                    </form>
+                </div>
+                <!-- //주소검색 -->
 
-            <!-- 현재주소 -->
-            <div class="location_my">강서구 가양동</div>
-            <!-- //현재주소 -->
+                <!-- 현재주소 -->
+                <div class="location_my">강서구 가양동</div>
+                <!-- //현재주소 -->
 
-            <!-- 버튼-지역설정완료 -->
-            <button type="button" title="지역설정완료" class="btn_setting_end" onclick="location.href='../sub/address_search.html'">지역설정 완료</button>
-            <!-- //버튼-지역설정완료 -->
+                <!-- 버튼-지역설정완료 -->
+                <button type="button" title="지역설정완료" class="btn_setting_end" onclick="location.href='../sub/address_search.html'">지역설정 완료</button>
+                <!-- //버튼-지역설정완료 -->
 
-            <!-- * 카카오맵 - 지도퍼가기 샘플 -->
-            <div id="daumRoughmapContainer1646313246227" class="root_daum_roughmap root_daum_roughmap_landing"></div>
-            <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
-            <script charset="UTF-8">
-                new daum.roughmap.Lander({
-                    "timestamp" : "1646313246227",
-                    "key" : "29cpb",
-                    "mapWidth" : "750",
-                    "mapHeight" : "1000"
-                }).render();
-            </script>
-            <!-- //* 카카오맵 - 지도퍼가기 샘플 -->
+                <!-- * 카카오맵 - 지도퍼가기 샘플 -->
+                <div id="daumRoughmapContainer1646313246227" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+                <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+                <script charset="UTF-8">
+                    new daum.roughmap.Lander({
+                        "timestamp": "1646313246227",
+                        "key": "29cpb",
+                        "mapWidth": "750",
+                        "mapHeight": "1000"
+                    }).render();
+                </script>
+                <!-- //* 카카오맵 - 지도퍼가기 샘플 -->
 
-        </section>
-        <!-- //위치지정 지도 -->
+            </section>
+            <!-- //위치지정 지도 -->
+        </div>
+        <!-- //본문내용 -->
     </div>
-    <!-- //본문내용 -->
-</div>
+    <script src="../resources/js/jquery-3.4.1.js"></script>
+    <script src="../resources/js/common.js"></script>
+    <script src="../resources/js/swiper.min.js"></script>
 </body>
+
 </html>

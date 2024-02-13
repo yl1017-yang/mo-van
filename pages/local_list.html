@@ -1,357 +1,358 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta http-equiv="imagetoolbar" content="no">
-<meta name="format-detection" content="telephone=no">
-<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
-<title>펫미</title>
-<link rel="stylesheet" href="../resources/css/common.css">
-<link rel="stylesheet" href="../resources/css/layout.css">
-<link rel="stylesheet" href="../resources/css/main.css">
-<script src="../resources/js/jquery-3.4.1.js"></script>
-<script src="../resources/js/common.js"></script>
 
-<!-- 스와이퍼 4.5.1 -->
-<link rel="stylesheet" href="../resources/css/swiper.min.css">
-<script src="../resources/js/swiper.min.js"></script>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <title>VAN</title>
+    <link rel="stylesheet" href="../resources/css/common.css">
+    <link rel="stylesheet" href="../resources/css/contents.css">
+    <link rel="stylesheet" href="../resources/css/swiper.min.css">
 </head>
+
 <body>
 
-<div class="wrap" id="wrap">
-    <!-- 서브타이틀 -->
-    <header class="sub_header">
-        <div class="inner">
-            <a href="../sub/local_list.html" class="sub_title">강남구 역삼동 <span class="loca_arrow"><img src="../images/common/icon_down2.png" alt="" /></span></a>
-            <a href="../sub/local_map.html" class="btn_map"><span class="blind">지도보기</span></a>
+    <div class="wrap" id="wrap">
+        <!-- 서브타이틀 -->
+        <header class="sub_header">
+            <div class="inner">
+                <a href="../sub/local_list.html" class="sub_title">강남구 역삼동 <span class="loca_arrow"><img src="../images/common/icon_down2.png" alt="" /></span></a>
+                <a href="../sub/local_map.html" class="btn_map"><span class="blind">지도보기</span></a>
+            </div>
+            <div class="swiper-container local_category">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <!-- 반려견미용 [D] 버튼클릭시 토스트배너 출력 -->
+                        <a href="#cate_pop1" class="btn_cate">반려견미용</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- 편의시설 [D] 버튼클릭시 토스트배너 출력 -->
+                        <a href="#cate_pop2" class="btn_cate">편의시설 <span class="desc">1</span></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- 거리순 [D] 버튼클릭시 토스트배너 출력 -->
+                        <a href="#cate_pop3" class="btn_cate">거리순</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- 제휴/비제휴점 [D] 버튼클릭시 토스트배너 출력 -->
+                        <a href="#cate_pop4" class="btn_cate">제휴/비제휴점</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- //서브타이틀 -->
+
+        <!-- [D] 버튼클릭시 토스트배너 -->
+        <div id="cate_pop1" class="category_box">
+            <div class="dim_bg"></div>
+            <div class="category_content">
+                <a href="#" class="btn_close"><span class="blind">닫기</span></a>
+                <p>서비스 선택</p>
+                <ul class="cate_service">
+                    <li>
+                        <input id="service_1" type="radio" name="service" value="1">
+                        <label for="service_1">
+                            <span class="text">반려견미용</span>
+                            <img src="../images/main/img_service_01.png" alt="" />
+                        </label>
+                    </li>
+                    <li>
+                        <input id="service_2" type="radio" name="service" value="2">
+                        <label for="service_2">
+                            <span class="text">반려묘미용</span>
+                            <img src="../images/main/img_service_02.png" alt="" />
+                        </label>
+                    </li>
+                    <li>
+                        <input id="service_3" type="radio" name="service" value="3">
+                        <label for="service_3">
+                            <span class="text">호텔</span>
+                            <img src="../images/main/img_service_03.png" alt="" />
+                        </label>
+                    </li>
+                    <li>
+                        <input id="service_4" type="radio" name="service" value="4">
+                        <label for="service_4">
+                            <span class="text">유치원</span>
+                            <img src="../images/main/img_service_04.png" alt="" />
+                        </label>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="swiper-container local_category">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <!-- 반려견미용 [D] 버튼클릭시 토스트배너 출력 -->
-                    <a href="#cate_pop1" class="btn_cate">반려견미용</a>
-                </div>
-                <div class="swiper-slide">
-                    <!-- 편의시설 [D] 버튼클릭시 토스트배너 출력 -->
-                    <a href="#cate_pop2" class="btn_cate">편의시설 <span class="desc">1</span></a>
-                </div>
-                <div class="swiper-slide">
-                    <!-- 거리순 [D] 버튼클릭시 토스트배너 출력 -->
-                    <a href="#cate_pop3" class="btn_cate">거리순</a>
-                </div>
-                <div class="swiper-slide">
-                    <!-- 제휴/비제휴점 [D] 버튼클릭시 토스트배너 출력 -->
-                    <a href="#cate_pop4" class="btn_cate">제휴/비제휴점</a>
+
+        <div id="cate_pop2" class="category_box">
+            <div class="dim_bg"></div>
+            <div class="category_content">
+                <a href="#" class="btn_close"><span class="blind">닫기</span></a>
+                <p>편의시설 선택</p>
+                <ul class="cate_amenities">
+                    <li>
+                        <input id="amenities_1" type="checkbox" name="amenities" value="1">
+                        <label for="amenities_1">주차가능</label>
+                    </li>
+                    <li>
+                        <input id="amenities_2" type="checkbox" name="amenities" value="2">
+                        <label for="amenities_2">픽업가능</label>
+                    </li>
+                    <li>
+                        <input id="amenities_3" type="checkbox" name="amenities" value="3">
+                        <label for="amenities_3">애견카페</label>
+                    </li>
+                    <li>
+                        <input id="amenities_4" type="checkbox" name="amenities" value="4">
+                        <label for="amenities_4">놀이터</label>
+                    </li>
+                    <li>
+                        <input id="amenities_5" type="checkbox" name="amenities" value="1">
+                        <label for="amenities_5">주말영업</label>
+                    </li>
+                    <li>
+                        <input id="amenities_6" type="checkbox" name="amenities" value="2">
+                        <label for="amenities_6">야간영업</label>
+                    </li>
+                    <li>
+                        <input id="amenities_7" type="checkbox" name="amenities" value="3">
+                        <label for="amenities_7">동시미용</label>
+                    </li>
+                    <li>
+                        <input id="amenities_8" type="checkbox" name="amenities" value="4">
+                        <label for="amenities_8">Wi-Fi</label>
+                    </li>
+                    <li>
+                        <input id="amenities_9" type="checkbox" name="amenities" value="1">
+                        <label for="amenities_9">셀프목욕</label>
+                    </li>
+                    <li>
+                        <input id="amenities_10" type="checkbox" name="amenities" value="2">
+                        <label for="amenities_10">용품판매</label>
+                    </li>
+                    <li>
+                        <input id="amenities_11" type="checkbox" name="amenities" value="3">
+                        <label for="amenities_11">동물병원</label>
+                    </li>
+                    <li>
+                        <input id="amenities_12" type="checkbox" name="amenities" value="4">
+                        <label for="amenities_12">CCTV</label>
+                    </li>
+                    <li>
+                        <input id="amenities_13" type="checkbox" name="amenities" value="1">
+                        <label for="amenities_13">클리핑전문</label>
+                    </li>
+                    <li>
+                        <input id="amenities_14" type="checkbox" name="amenities" value="2">
+                        <label for="amenities_14">애견교육</label>
+                    </li>
+                    <li>
+                        <input id="amenities_15" type="checkbox" name="amenities" value="3">
+                        <label for="amenities_15">무마취</label>
+                    </li>
+                    <li>
+                        <input id="amenities_16" type="checkbox" name="amenities" value="4">
+                        <label for="amenities_16">마사지</label>
+                    </li>
+                    <li>
+                        <input id="amenities_17" type="checkbox" name="amenities" value="1">
+                        <label for="amenities_17">포토존</label>
+                    </li>
+                    <li>
+                        <input id="amenities_18" type="checkbox" name="amenities" value="2">
+                        <label for="amenities_18">아로마</label>
+                    </li>
+                    <li>
+                        <input id="amenities_19" type="checkbox" name="amenities" value="3">
+                        <label for="amenities_19">스파</label>
+                    </li>
+                    <li>
+                        <input id="amenities_20" type="checkbox" name="amenities" value="4">
+                        <label for="amenities_20">분양</label>
+                    </li>
+                </ul>
+                <div class="btn_wrap">
+                    <a href="#" class="btn_reset">초기화</a>
+                    <a href="#" class="btn_confirm">확인</a>
                 </div>
             </div>
         </div>
-    </header>
-    <!-- //서브타이틀 -->
 
-    <!-- [D] 버튼클릭시 토스트배너 -->
-    <div id="cate_pop1" class="category_box">
-        <div class="dim_bg"></div>
-        <div class="category_content">
-            <a href="#" class="btn_close"><span class="blind">닫기</span></a>
-            <p>서비스 선택</p>
-            <ul class="cate_service">
-                <li>
-                    <input id="service_1" type="radio" name="service" value="1">
-                    <label for="service_1">
-                        <span class="text">반려견미용</span>
-                        <img src="../images/main/img_service_01.png" alt="" />
-                    </label>
-                </li>
-                <li>
-                    <input id="service_2" type="radio" name="service" value="2">
-                    <label for="service_2">
-                        <span class="text">반려묘미용</span>
-                        <img src="../images/main/img_service_02.png" alt="" />
-                    </label>
-                </li>
-                <li>
-                    <input id="service_3" type="radio" name="service" value="3">
-                    <label for="service_3">
-                        <span class="text">호텔</span>
-                        <img src="../images/main/img_service_03.png" alt="" />
-                    </label>
-                </li>
-                <li>
-                    <input id="service_4" type="radio" name="service" value="4">
-                    <label for="service_4">
-                        <span class="text">유치원</span>
-                        <img src="../images/main/img_service_04.png" alt="" />
-                    </label>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <div id="cate_pop2" class="category_box">
-        <div class="dim_bg"></div>
-        <div class="category_content">
-            <a href="#" class="btn_close"><span class="blind">닫기</span></a>
-            <p>편의시설 선택</p>
-            <ul class="cate_amenities">
-                <li>
-                    <input id="amenities_1" type="checkbox" name="amenities" value="1">
-                    <label for="amenities_1">주차가능</label>
-                </li>
-                <li>
-                    <input id="amenities_2" type="checkbox" name="amenities" value="2">
-                    <label for="amenities_2">픽업가능</label>
-                </li>
-                <li>
-                    <input id="amenities_3" type="checkbox" name="amenities" value="3">
-                    <label for="amenities_3">애견카페</label>
-                </li>
-                <li>
-                    <input id="amenities_4" type="checkbox" name="amenities" value="4">
-                    <label for="amenities_4">놀이터</label>
-                </li>
-                <li>
-                    <input id="amenities_5" type="checkbox" name="amenities" value="1">
-                    <label for="amenities_5">주말영업</label>
-                </li>
-                <li>
-                    <input id="amenities_6" type="checkbox" name="amenities" value="2">
-                    <label for="amenities_6">야간영업</label>
-                </li>
-                <li>
-                    <input id="amenities_7" type="checkbox" name="amenities" value="3">
-                    <label for="amenities_7">동시미용</label>
-                </li>
-                <li>
-                    <input id="amenities_8" type="checkbox" name="amenities" value="4">
-                    <label for="amenities_8">Wi-Fi</label>
-                </li>
-                <li>
-                    <input id="amenities_9" type="checkbox" name="amenities" value="1">
-                    <label for="amenities_9">셀프목욕</label>
-                </li>
-                <li>
-                    <input id="amenities_10" type="checkbox" name="amenities" value="2">
-                    <label for="amenities_10">용품판매</label>
-                </li>
-                <li>
-                    <input id="amenities_11" type="checkbox" name="amenities" value="3">
-                    <label for="amenities_11">동물병원</label>
-                </li>
-                <li>
-                    <input id="amenities_12" type="checkbox" name="amenities" value="4">
-                    <label for="amenities_12">CCTV</label>
-                </li>
-                <li>
-                    <input id="amenities_13" type="checkbox" name="amenities" value="1">
-                    <label for="amenities_13">클리핑전문</label>
-                </li>
-                <li>
-                    <input id="amenities_14" type="checkbox" name="amenities" value="2">
-                    <label for="amenities_14">애견교육</label>
-                </li>
-                <li>
-                    <input id="amenities_15" type="checkbox" name="amenities" value="3">
-                    <label for="amenities_15">무마취</label>
-                </li>
-                <li>
-                    <input id="amenities_16" type="checkbox" name="amenities" value="4">
-                    <label for="amenities_16">마사지</label>
-                </li>
-                <li>
-                    <input id="amenities_17" type="checkbox" name="amenities" value="1">
-                    <label for="amenities_17">포토존</label>
-                </li>
-                <li>
-                    <input id="amenities_18" type="checkbox" name="amenities" value="2">
-                    <label for="amenities_18">아로마</label>
-                </li>
-                <li>
-                    <input id="amenities_19" type="checkbox" name="amenities" value="3">
-                    <label for="amenities_19">스파</label>
-                </li>
-                <li>
-                    <input id="amenities_20" type="checkbox" name="amenities" value="4">
-                    <label for="amenities_20">분양</label>
-                </li>
-            </ul>
-            <div class="btn_wrap">
-                <a href="#" class="btn_reset">초기화</a>
-                <a href="#" class="btn_confirm">확인</a>
+        <div id="cate_pop3" class="category_box">
+            <div class="dim_bg"></div>
+            <div class="category_content">
+                <a href="#" class="btn_close"><span class="blind">닫기</span></a>
+                <p>정렬방식 선택</p>
+                <ul class="cate_sort">
+                    <li>
+                        <input id="sort_1" type="radio" name="sort" value="1" checked="checked">
+                        <label for="sort_1">주변순</label>
+                    </li>
+                    <li>
+                        <input id="sort_2" type="radio" name="sort" value="2">
+                        <label for="sort_2">평점순</label>
+                    </li>
+                    <li>
+                        <input id="sort_3" type="radio" name="sort" value="3">
+                        <label for="sort_3">추천순</label>
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
 
-    <div id="cate_pop3" class="category_box">
-        <div class="dim_bg"></div>
-        <div class="category_content">
-            <a href="#" class="btn_close"><span class="blind">닫기</span></a>
-            <p>정렬방식 선택</p>
-            <ul class="cate_sort">
-                <li>
-                    <input id="sort_1" type="radio" name="sort" value="1" checked="checked">
-                    <label for="sort_1">주변순</label>
-                </li>
-                <li>
-                    <input id="sort_2" type="radio" name="sort" value="2">
-                    <label for="sort_2">평점순</label>
-                </li>
-                <li>
-                    <input id="sort_3" type="radio" name="sort" value="3">
-                    <label for="sort_3">추천순</label>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <div id="cate_pop4" class="category_box">
-        <div class="dim_bg"></div>
-        <div class="category_content">
-            <a href="#" class="btn_close"><span class="blind">닫기</span></a>
-            <p>제휴/비제휴점 선택</p>
-            <ul class="cate_sort">
-                <li>
-                    <input id="affiliate_1" type="radio" name="affiliate" value="1" checked="checked">
-                    <label for="affiliate_1">제휴/비제휴점 모두</label>
-                </li>
-                <li>
-                    <input id="affiliate_2" type="radio" name="affiliate" value="2">
-                    <label for="affiliate_2">제휴점</label>
-                </li>
-                <li>
-                    <input id="affiliate_3" type="radio" name="affiliate" value="3">
-                    <label for="affiliate_3">비제휴점</label>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <!-- //[D] 버튼클릭시 토스트배너 -->
-
-    <!-- 본문내용 -->
-    <div class="container sub_content">
-        <!-- 내주변 리스트 -->
-        <section class="inner">
-            <ul class="local_list">
-                <li>
-                    <a href="../sub/local_list_result.html">
-                        <figure class="thumbimg">
-                            <span class="mark">제휴</span>
-                            <img src="../images/main/img_local_01.png" alt="" />
-                        </figure>
-                        <div class="text_wrap">
-                            <p class="title">해당매장 없을 시 화면</p>
-                            <p class="rate"><span class="rate_all">5.0</span> (1,253) 서울 강남구 | 2.5km</p>
-                            <p class="desc">목욕 20,000원 | 유치원(1일) 30,000원</p>
-                            <p class="category">반려견미용·호텔</p>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <figure class="thumbimg">
-                            <span class="mark">제휴</span>
-                            <img src="../images/main/img_local_02.png" alt="" />
-                        </figure>
-                        <div class="text_wrap">
-                            <p class="title">그루밍살롱 애견호텔 유치원</p>
-                            <p class="rate"><span class="rate_all">5.0</span> (1,253) 서울 강남구 | 2.5km</p>
-                            <p class="desc">목욕 20,000원 | 유치원(1일) 30,000원</p>
-                            <p class="category">반려견미용·유치원</p>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <figure class="thumbimg">
-                            <span class="mark">제휴</span>
-                            <img src="../images/main/img_local_03.png" alt="" />
-                        </figure>
-                        <div class="text_wrap">
-                            <p class="title">그루밍살롱 애견호텔 유치원</p>
-                            <p class="rate"><span class="rate_all">5.0</span> (1,253) 서울 강남구 | 2.5km</p>
-                            <p class="desc">목욕 20,000원 | 유치원(1일) 30,000원</p>
-                            <p class="category">반려견미용·호텔</p>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <figure class="thumbimg">
-                            <span class="mark">제휴</span>
-                            <img src="../images/main/img_local_04.png" alt="" />
-                        </figure>
-                        <div class="text_wrap">
-                            <p class="title">그루밍살롱 애견호텔 유치원</p>
-                            <p class="rate"><span class="rate_all">5.0</span> (1,253) 서울 강남구 | 2.5km</p>
-                            <p class="desc">목욕 20,000원 | 유치원(1일) 30,000원</p>
-                            <p class="category">반려견미용·유치원</p>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <figure class="thumbimg">
-                            <span class="mark">제휴</span>
-                            <img src="../images/main/img_local_05.png" alt="" />
-                        </figure>
-                        <div class="text_wrap">
-                            <p class="title">그루밍살롱 애견호텔 유치원</p>
-                            <p class="rate"><span class="rate_all">5.0</span> (1,253) 서울 강남구 | 2.5km</p>
-                            <p class="desc">목욕 20,000원 | 유치원(1일) 30,000원</p>
-                            <p class="category">반려견미용</p>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </section>
-        <!-- //내주변 리스트 -->
-    </div>
-    <!-- //본문내용 -->
-
-    <!-- 하단 -->
-    <footer class="footer">
-        <div class="btn_top_wrap">
-            <a href="#wrap" class="btn_top"><span class="blind">top</span></a>
-        </div>
-        <div class="ft_info">
-            <div class="info_text">(주)펫미 사업자 정보</div>
-            <div class="info_con">
-                <dl>
-                    <dt>대표이사</dt>
-                    <dd>백영호</dd>
-                    <dt>주소</dt>
-                    <dd>서울시 강남구 역삼로 222 휘닉스빌딩 4층</dd>
-                    <dt>사업자등록번호</dt>
-                    <dd>565 - 81 - 01048</dd>
-                    <dt>통신판매업 신고번호</dt>
-                    <dd>제2022 - 서울강남 - 00098호</dd>
-                </dl>
+        <div id="cate_pop4" class="category_box">
+            <div class="dim_bg"></div>
+            <div class="category_content">
+                <a href="#" class="btn_close"><span class="blind">닫기</span></a>
+                <p>제휴/비제휴점 선택</p>
+                <ul class="cate_sort">
+                    <li>
+                        <input id="affiliate_1" type="radio" name="affiliate" value="1" checked="checked">
+                        <label for="affiliate_1">제휴/비제휴점 모두</label>
+                    </li>
+                    <li>
+                        <input id="affiliate_2" type="radio" name="affiliate" value="2">
+                        <label for="affiliate_2">제휴점</label>
+                    </li>
+                    <li>
+                        <input id="affiliate_3" type="radio" name="affiliate" value="3">
+                        <label for="affiliate_3">비제휴점</label>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="ft_desc">
-            (주)펫미는 통신판매중개자로서 통신판매의 당사자가 아니며, 
-            상품 거래정보 및 거래 등에 대해 책임을 지지 않습니다.
+        <!-- //[D] 버튼클릭시 토스트배너 -->
+
+        <!-- 본문내용 -->
+        <div class="container sub_content">
+            <!-- 내주변 리스트 -->
+            <section class="inner">
+                <ul class="local_list">
+                    <li>
+                        <a href="../sub/local_list_result.html">
+                            <figure class="thumbimg">
+                                <span class="mark">제휴</span>
+                                <img src="../images/main/img_local_01.png" alt="" />
+                            </figure>
+                            <div class="text_wrap">
+                                <p class="title">해당매장 없을 시 화면</p>
+                                <p class="rate"><span class="rate_all">5.0</span> (1,253) 서울 강남구 | 2.5km</p>
+                                <p class="desc">목욕 20,000원 | 유치원(1일) 30,000원</p>
+                                <p class="category">반려견미용·호텔</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <figure class="thumbimg">
+                                <span class="mark">제휴</span>
+                                <img src="../images/main/img_local_02.png" alt="" />
+                            </figure>
+                            <div class="text_wrap">
+                                <p class="title">그루밍살롱 애견호텔 유치원</p>
+                                <p class="rate"><span class="rate_all">5.0</span> (1,253) 서울 강남구 | 2.5km</p>
+                                <p class="desc">목욕 20,000원 | 유치원(1일) 30,000원</p>
+                                <p class="category">반려견미용·유치원</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <figure class="thumbimg">
+                                <span class="mark">제휴</span>
+                                <img src="../images/main/img_local_03.png" alt="" />
+                            </figure>
+                            <div class="text_wrap">
+                                <p class="title">그루밍살롱 애견호텔 유치원</p>
+                                <p class="rate"><span class="rate_all">5.0</span> (1,253) 서울 강남구 | 2.5km</p>
+                                <p class="desc">목욕 20,000원 | 유치원(1일) 30,000원</p>
+                                <p class="category">반려견미용·호텔</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <figure class="thumbimg">
+                                <span class="mark">제휴</span>
+                                <img src="../images/main/img_local_04.png" alt="" />
+                            </figure>
+                            <div class="text_wrap">
+                                <p class="title">그루밍살롱 애견호텔 유치원</p>
+                                <p class="rate"><span class="rate_all">5.0</span> (1,253) 서울 강남구 | 2.5km</p>
+                                <p class="desc">목욕 20,000원 | 유치원(1일) 30,000원</p>
+                                <p class="category">반려견미용·유치원</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <figure class="thumbimg">
+                                <span class="mark">제휴</span>
+                                <img src="../images/main/img_local_05.png" alt="" />
+                            </figure>
+                            <div class="text_wrap">
+                                <p class="title">그루밍살롱 애견호텔 유치원</p>
+                                <p class="rate"><span class="rate_all">5.0</span> (1,253) 서울 강남구 | 2.5km</p>
+                                <p class="desc">목욕 20,000원 | 유치원(1일) 30,000원</p>
+                                <p class="category">반려견미용</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!-- //내주변 리스트 -->
         </div>
-        <ul class="ft_menu">
-            <li><a href="#">사업자정보확인</a></li>
-            <li><a href="#">이용약관</a></li>
-            <li><a href="#">개인정보처리방침</a></li>
-        </ul>
-    </footer>
-    <!-- //하단 -->
+        <!-- //본문내용 -->
 
-    <!-- 툴바 -->
-    <div class="toolbar">
-        <!-- [D] 활성화시 class on 추가  -->
-		<a href="../sub/local_list.html" class="on"><span class="map">내주변</span></a>
-        <a href="#"><span class="portfolio">포트폴리오</span></a>
-        <a href="../main/index.html"><span class="home"></span></a>
-        <a href="#"><span class="reservation">예약</span></a>
-        <a href="#"><span class="my">MY</span></a>
-	</div>
-    <!-- //툴바 -->
+        <!-- 하단 -->
+        <footer class="footer">
+            <div class="btn_top_wrap">
+                <a href="#wrap" class="btn_top"><span class="blind">top</span></a>
+            </div>
+            <div class="ft_info">
+                <div class="info_text">(주)펫미 사업자 정보</div>
+                <div class="info_con">
+                    <dl>
+                        <dt>대표이사</dt>
+                        <dd>백영호</dd>
+                        <dt>주소</dt>
+                        <dd>서울시 강남구 역삼로 222 휘닉스빌딩 4층</dd>
+                        <dt>사업자등록번호</dt>
+                        <dd>565 - 81 - 01048</dd>
+                        <dt>통신판매업 신고번호</dt>
+                        <dd>제2022 - 서울강남 - 00098호</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="ft_desc">
+                (주)펫미는 통신판매중개자로서 통신판매의 당사자가 아니며,
+                상품 거래정보 및 거래 등에 대해 책임을 지지 않습니다.
+            </div>
+            <ul class="ft_menu">
+                <li><a href="#">사업자정보확인</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+            </ul>
+        </footer>
+        <!-- //하단 -->
 
-</div>
+        <!-- 툴바 -->
+        <div class="toolbar">
+            <!-- [D] 활성화시 class on 추가  -->
+            <a href="../sub/local_list.html" class="on"><span class="map">내주변</span></a>
+            <a href="#"><span class="portfolio">포트폴리오</span></a>
+            <a href="../main/index.html"><span class="home"></span></a>
+            <a href="#"><span class="reservation">예약</span></a>
+            <a href="#"><span class="my">MY</span></a>
+        </div>
+        <!-- //툴바 -->
+
+    </div>
+
+    <script src="../resources/js/jquery-3.4.1.js"></script>
+    <script src="../resources/js/common.js"></script>
+    <script src="../resources/js/swiper.min.js"></script>
 </body>
+
 </html>
