@@ -57,7 +57,7 @@ body{height:100%;overflow-y:scroll;}
 .main_favorite_store{margin:6.9444vw 0;}
 .main_favorite_store .store_list li{margin-bottom:6.3889vw;}
 .main_favorite_store .store_list a{position:relative;display:flex;}
-.main_favorite_store .store_list .thumb_img{position:relative;width:27.0833vw;height:27.0833vw;margin-right:4.7222vw;border-radius:2.7778px;overflow:hidden;}
+.main_favorite_store .store_list .thumb_img{position:relative;width:27.0833vw;height:27.0833vw;margin-right:4.7222vw;border-radius:5.5556px;overflow:hidden;}
 .main_favorite_store .store_list .thumb_img img{width:100%;}
 .main_favorite_store .store_list .thumb_img .mark{position:absolute;top:2.2222vw;left:2.2222vw;width:4.1667vw;height:3.75vw;background:url("../../images/common/icon_favorite.svg") no-repeat 0 0/100%;}
 .main_favorite_store .store_list .thumb_img .mark.on{background:url("../../images/common/icon_favorite_on.svg") no-repeat 0 0/100%;}
