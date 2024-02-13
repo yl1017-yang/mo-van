@@ -8,32 +8,15 @@ body{height:100%;overflow-y:scroll;}
 
 /****************** 상단 ******************/
 /* 메인헤더 */
-.main_header{position:absolute;top:0;left:0;width:100%;height:16vw;display:flex;align-content:center;flex-wrap:wrap;z-index:999;}
-.main_header.fixed{position:fixed;background:url("../../images/common/bg_header.png");background-size:contain;}
-.main_header .gnb{display:flex;justify-content:space-between;width:100%;margin:0 6.4vw;}
-.main_header .gnb .alert{position:relative;width:7.467vw;height:7.467vw;background:url("../../images/common/icon_alert.png") no-repeat 0 0/100%;}
-.main_header .gnb .alert:after{content:'';position:absolute;top:0;right:0;width:1.333vw;height:1.333vw;background:#FF334B;border-radius:100%;}
-.main_header .gnb .location{position:relative;display:block;margin-top:1vw;}
-.main_header .gnb .location:before{content:'';position:absolute;top:0;left:0;width:6.4vw;height:6.4vw;background:url("../../images/common/icon_map.png") no-repeat 0 0/100%;}
-.main_header .gnb .location .loca_tit{display:inline-block;color:#fff;font-size:4.267vw;font-weight:500;padding-left:6.8vw;margin-top:0.7vw;}
-.main_header .gnb .location .loca_arrow img{width:2.667vw;}
-
-/* 상단검색 */
-.main_header .gnb .search{width:7.467vw;height:7.467vw;background:url("../../images/common/icon_search.png") no-repeat 0 0/100%;}
-
-.search_btn_close{display:none;position:absolute;top:0;right:0;width:70px;height:60px;background:#fff;cursor:pointer;}
-.search_btn_close::before{content:'';width:24px;height:2px;position:absolute;left:26%;top:47%;opacity:1;background-color:#222;display:block;border-radius:10px;transform:rotate(-45deg);-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-o-transform:rotate(-45deg);-ms-transform:rotate(-45deg);}
-.search_btn_close::after{content:'';width:24px;height:2px;position:absolute;left:26%;top:47%;opacity:1;background-color:#222;display:block;border-radius:10px;transform:rotate(45deg);-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-o-transform:rotate(45deg);-ms-transform:rotate(45deg);}
-
-.search_wrap{display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:100;}
-.search_wrap .search_content{position:relative;width:100%;}
-.search_wrap .search_content .search_bar{display:flex;width:100%;height:18vw;padding:15vw 10vw 0 10vw;}
-.search_wrap .search_content .search_bar form{width:100%;}
-.search_wrap .search_content .search_bar .search_result{width:100%;height:18vw;padding-left:2vw;border-bottom:2px solid #444;}
-.search_wrap .search_content .search_bar .btn_allsearch{width:7.467vw;height:7.467vw;background:url("../../images/common/icon_search_02.png") no-repeat 0 0/100%;margin:5.5vw 0;}
-.search_wrap .search_content .search_text{position:relative;margin:25vw 10vw 0 10vw;}
-.search_wrap .search_content .search_text a{display:block;line-height:1.8;}
-.search_wrap .dim_bg{position:absolute;top:0;left:0;width:100vw;height:100vh;background:#fff;}
+.header{position:absolute;top:0;left:0;width:100%;height:16vw;display:flex;align-content:center;flex-wrap:wrap;z-index:999;}
+.header.fixed{position:fixed;background:url("../../images/common/bg_header.png");background-size:contain;}
+.header .gnb{display:flex;justify-content:space-between;width:100%;margin:0 6.4vw;}
+.header .gnb .alert{position:relative;width:7.467vw;height:7.467vw;background:url("../../images/common/icon_alert.png") no-repeat 0 0/100%;}
+.header .gnb .alert:after{content:'';position:absolute;top:0;right:0;width:1.333vw;height:1.333vw;background:#FF334B;border-radius:100%;}
+.header .gnb .location{position:relative;display:block;margin-top:1vw;}
+.header .gnb .location:before{content:'';position:absolute;top:0;left:0;width:6.4vw;height:6.4vw;background:url("../../images/common/icon_map.png") no-repeat 0 0/100%;}
+.header .gnb .location .loca_tit{display:inline-block;color:#fff;font-size:4.267vw;font-weight:500;padding-left:6.8vw;margin-top:0.7vw;}
+.header .gnb .location .loca_arrow img{width:2.667vw;}
 
 /* 서브헤더 */
 .sub_header{position:fixed;top:0;left:0;width:100%;min-height:16vw;padding:4vw 0;background:#fff;display:flex;align-content:center;flex-wrap:wrap;border-bottom:1px solid #EDEDED;z-index:100;}
@@ -492,5 +475,3 @@ body{height:100%;overflow-y:scroll;}
 /* 내주변 - 지도보기 : 위치정보 설정하기 */
 .map_setting_warp{height:100vh;margin:-16vw 0;display:flex;align-content:center;flex-wrap:wrap;justify-content:center;text-align:center;flex-direction: column;}
 .map_setting_warp .btn_map_setting{display:block;padding:3.733vw 5.333vw;background:#FF781E;color:#fff;border-radius:100px;font-size:3.733vw;margin-top:6.4vw;}
-
-
