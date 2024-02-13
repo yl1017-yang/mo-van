@@ -17,12 +17,10 @@ body{height:100%;overflow-y:scroll;}
 .header .btn_menu_open{background:url("../../images/common/icon_menu.svg") no-repeat 50% 50%/3.4722vw 3.0556vw;}
 
 /* 검색 */
-.search_wrap{position:relative;width:100%;height:100%;}
-.search_wrap .search_content{position:relative;margin:0 6.4vw;}
-.search_wrap .search_content .search_bar{display:flex;width:100%;height:100%;}
-.search_wrap .search_content .search_bar form{width:100%;}
-.search_wrap .search_content .search_bar .search_result{width:100%;height:16.6667vw;padding-left:12.9167vw;background:#F1F4F6;border-radius:2.7778vw;}
-.search_wrap .search_content .search_bar .btn_allsearch{position:absolute;top:38%;left:5.5556vw;width:4.7222vw;height:4.1667vw;background:url("../../images/common/icon_search_01.svg") no-repeat 0 0/100%;}
+.search_wrap{position:relative;height:100%;margin:0 6.4vw;}
+.search_wrap form{width:100%;}
+.search_wrap .search_result{width:100%;height:16.6667vw;padding-left:12.9167vw;background:#F1F4F6;border-radius:2.7778vw;}
+.search_wrap .btn_allsearch{position:absolute;top:38%;left:5.5556vw;width:4.7222vw;height:4.1667vw;background:url("../../images/common/icon_search_01.svg") no-repeat 0 0/100%;}
 
 /****************** 메인 내용 ******************/
 /* 메인타이틀 */
@@ -115,13 +113,13 @@ body{height:100%;overflow-y:scroll;}
 .location_warp #daumRoughmapContainer1646313246227 .wrap_map{height:100vh !important;}
 
 /* 주소검색 - 기본 */
-.address_search_wrap{background:#fafafa;padding:8vw 0;}
+/* .address_search_wrap{background:#fafafa;padding:8vw 0;}
 .address_search_wrap .text{font-size:4.8vw;color:#222;padding-bottom:6.4vw;}
 .address_search_wrap .add_search{position:relative;height:12.8vw;background:#fff;border:1px solid #333;border-radius:4px;display:flex;align-items:center;}
 .address_search_wrap .add_search fieldset{width:100%;}
 .address_search_wrap .add_search .search_result{width:100%;}
 .address_search_wrap .add_search .btn_allsearch{width:5.333vw;height:5.333vw;font-size:3.733vw;margin:0 1.6vw 0 3.2vw;background:url("../../images/common/icon_search_02.png") no-repeat 0 0/100%;}
-.address_search_wrap .add_search .btn_cancle{position:absolute;top:3.8vw;right:3.2vw;width:4.8vw;height:4.8vw;background:url("../../images/common/icon_close.png") no-repeat 0 0/100%;}
+.address_search_wrap .add_search .btn_cancle{position:absolute;top:3.8vw;right:3.2vw;width:4.8vw;height:4.8vw;background:url("../../images/common/icon_close.png") no-repeat 0 0/100%;} */
 
 /* 주소검색 - 최근검색 */
 .recently_search_wrap{padding:10.667vw 0;}
