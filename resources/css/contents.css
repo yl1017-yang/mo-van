@@ -114,7 +114,7 @@ body{height:100%;overflow-y:scroll;}
   .bottom_sheet_handle:after {
     content: '';
     position: absolute;
-    top: 20px;
+    top: 4.1667vw;
     left: 50%;
     transform: translatex(-50%);
     width: 15.2778vw;
@@ -123,8 +123,11 @@ body{height:100%;overflow-y:scroll;}
     border-radius: 100px;
   }   
   .bottom_sheet .bottom_content {
-    margin-top: 8.3333vw;
+    margin-top: 9.7222vw;
     height: 100%;
     overflow-y: auto;
     box-sizing: border-box;
+  }
+  .bottom_sheet .bottom_content .section_tab {
+    margin-top:0;
   }
