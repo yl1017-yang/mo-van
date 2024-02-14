@@ -1,10 +1,6 @@
 $(function () {
 	$(window).on('load', function () {
 		sliderVisual();
-		sliderStore();
-		sliderPremium();
-		sliderBanner();
-		sliderCategory();
 	});
 
 	// 메인 : 비주얼배너
@@ -20,82 +16,79 @@ $(function () {
 			clickable: true,
 		},
 	});
-
-
-	// 서브 : 내주변 - 지도보기 리스트
-	var sliderPremium = new Swiper('.slider_map_list', {
-		slidesPerView: 1.2,
-		spaceBetween: 12,
-		centeredSlides: true,
-		loop: true,
-		loopAdditionalSlides: 12,
-		speed: 800,
-		autoplay: {
-			delay: 3000,
-			disableOnInteraction: false,
-		},
-	});
 });
-
 
 $(function () {
 	// 탭메뉴
-	$(".tab_wrap .tab_li li").click(function () {
-		$(".tab_wrap .tab_li li").removeClass('on');
+	$(".tab_wrap .tab_box li").click(function () {
+		$(".tab_wrap .tab_box li").removeClass('on');
 		$(".tab_wrap .content").removeClass('on');
 		$(this).addClass('on');
 		$("#" + $(this).data('id')).addClass('on');
 	});
+});
 
 
-	// 삭제 레이어팝업
-	$('.btn_del').on('click', function (e) {
-		e.preventDefault();
-		$('.pop_wrap').addClass('active');
-		$("body").css({ 'height': $(window).height(), 'overflow': 'hidden' });
-	});
-	$('.pop_wrap .btn_confirm').on('click', function (e) {
-		e.preventDefault();
-		$(this).closest('.pop_wrap').removeClass('active');
-		$("body").css({ 'height': 'auto', 'overflow': 'auto' });
-	});
+//바텀시트 핸들바
+const handleWrap = document.querySelector(".bottom_sheet_handle");
+const bottomSheet = document.querySelector(".bottom_sheet");
 
-	// 내주변 - 카테고리 클릭시 토스트배너 출력
-	$('.btn_cate').on('click', function () {
-		$(".category_box .btn_close").show();
-		$(".category_box" + $(this).attr("href")).fadeIn(200);
-		//$(".category_box" + $(this).attr("href")).css({'display':'block'});
-		$(".category_box").find('.category_content').animate({ bottom: 0 }, 200);
-		$("body").css({ 'height': $(window).height(), 'overflow': 'hidden' });
-	});
-	$('.category_box .btn_close').on('click', function () {
-		$(".btn_cate").show();
-		$(".category_box").fadeOut(300);
-		//$(".category_box").css({'display':'none'});
-		$(".category_box").find('.category_content').animate({ bottom: -150 }, 300);
-		$("body").css({ 'height': 'auto', 'overflow': 'auto' });
-	});
+function handleSlide() {
+  bottomSheet .classList.toggle("is_active");
+}
+function handleSlideUp() {
+  bottomSheet .classList.add("is_active");
+}
+function handleSlideDown() {
+  bottomSheet .classList.remove("is_active");
+}
 
-	// 주소검색 - 검색 취소
-	var $search = $('.add_search .search_result');
-	var $clearIpt = $('.add_search .btn_cancle');
+// bottomSheet .addEventListener("click", () => {
+//   handleSlideUp();
+// });
 
-	$search.keyup(function () {
-		$(".add_search .btn_cancle").toggle(Boolean($(this).val()));
-	});
+let startPoint = 0;
+let endPoint = 0;
 
-	$clearIpt.toggle(Boolean($search.val()));
-	$clearIpt.click(function () {
-		$(".add_search .search_result").val('').focus();
-		$(this).hide();
-	});
+// handleWrap.addEventListener("mousedown", (e) => {
+//   console.log("mousedown", e.pageY);
+//   startPoint = e.pageY;
+//   e.preventDefault();
+//   handleSlideUp();
+// });  
+// handleWrap.addEventListener("mouseup", (e) => {
+//   console.log("mouseup", e.pageY);
+//   endPoint = e.pageY;
+// });
 
-	// 주소검색 - 삭제,전체삭제
-	$('.recently_search_wrap .btn_alldel').on('click', function () {
-		$(".recently_search_wrap").children().remove();
-	});
-	$('.recently_search_wrap .btn_delete').on('click', function () {
-		$(this).parent().remove();
-	});
+bottomSheet.addEventListener("mousedown", (e) => {
+  console.log("mousedown", e.pageY);
+  startPoint = e.pageY;
+  e.preventDefault();
+  handleSlide();
+});  
+bottomSheet.addEventListener("mouseup", (e) => {
+  console.log("mouseup", e.pageY);
+  endPoint = e.pageY;
+});
 
+
+// handleWrap.addEventListener("touchstart", (e) => {
+//   console.log("touchstart", e.touches[0].pageY);
+//   startPoint = e.touches[0].pageY;
+// });  
+// handleWrap.addEventListener("touchend", (e) => {
+//   console.log("touchend", e.changedTouches[0].pageY);
+//   endPoint = e.changedTouches[0].pageY;
+//   handleSlideUp();
+// });
+
+bottomSheet.addEventListener("touchstart", (e) => {
+  console.log("touchstart", e.touches[0].pageY);
+  startPoint = e.touches[0].pageY;
+});  
+bottomSheet.addEventListener("touchend", (e) => {
+  console.log("touchend", e.changedTouches[0].pageY);
+  endPoint = e.changedTouches[0].pageY;
+  handleSlide();
 });

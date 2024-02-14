@@ -66,7 +66,7 @@ button{border:none;background:none;cursor:pointer}
 a, button, [role=button], [role=link], [role=tab]{-webkit-touch-callout:none;}
 
 /* form select */
-input,textarea,select,button{box-sizing:border-box;border:none;outline-style:none;border-radius:0;font-size:inherit;font-family:inherit;color:inherit;}/* -webkit-appearance:none;-moz-appearance:none;appearance:none; */
+input,textarea,select,button{box-sizing:border-box;border:none;outline-style:none;border-radius:0;font-size:3.8889vw;font-family:inherit;color:inherit;}
 input[type='text'], input[type='password']{resize:none;box-shadow:none !important;border-radius:0;outline:none;}
 input:checked{-webkit-appearance:checkbox;}
 input[type='text']::-ms-clear, input[type='tel']::-ms-clear{display:none;}
@@ -103,67 +103,3 @@ input[type='text']:focus::-webkit-input-placeholder{visibility:hidden}
 input[type='text']:focus:-moz-placeholder{visibility:hidden}
 input[type='text']:focus::-moz-placeholder{visibility:hidden}
 input[type='text']:focus:-ms-input-placeholder{visibility:hidden}
-
-/* 폰트칼라 */
-:root {
-    /* color */
-    --primary:#093968;
-    --secondary:#38384F;
-    --point:#FF008E;
-    --gray222:#222;
-    --gray666:#666;
-    --gray999:#999;
-    --grayddd:#ddd;
-    --grayeee:#EBEDF1;
-    --white:#fff;
-    --black:#000;
-  
-    /* font size */
-    --size6:0.333rem;
-    --size8:0.444rem;
-    --size10:0.556rem;
-    --size12:0.667rem;
-    --size14:0.778rem;
-    --size15:0.833rem;
-    --size16:0.889rem;
-    --size18:1rem;
-    --size20:1.111rem;
-    --size22:1.222rem;
-    --size24:1.333rem;
-    --size26:1.444rem;
-    --size28:1.556rem;
-    --size30:1.667rem;
-    --size32:1.778rem;
-    --size34:1.889rem;
-    --size36:2rem;
-    --size38:2.111rem;
-    --size40:2.222rem;
-    --size42:2.333rem;
-    --size44:2.444rem;
-    --size48:2.667rem;
-    --size50:2.778rem;
-    --size52:2.889rem;
-    --size56:3.111rem;
-    --size60:3.333rem;
-    --size64:3.556rem;
-    --size70:3.889rem;
-    --size72:4rem;
-    --size76:4.222rem;
-    --size80:4.444rem;
-    --size86:4.778rem;
-    --size90:5rem;
-    --size100:5.556rem;
-    --size110:6.111rem;
-    --size120:6.667rem;
-    --size130:7.222rem;
-    --size140:7.778rem;
-    --size150:8.333rem;
-    --size160:8.889rem;
-    --size180:10rem;
-    --size200:11.111rem;
-    --size220:12.222rem;
-    --size240:13.333rem;
-    --size260:14.444rem;
-    --size280:15.556rem;
-    --size300:16.667rem;
-  }
