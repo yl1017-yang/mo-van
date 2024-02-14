@@ -11,18 +11,76 @@
     <link rel="stylesheet" href="../resources/css/common.css">
     <link rel="stylesheet" href="../resources/css/contents.css">
     <link rel="stylesheet" href="../resources/css/swiper.min.css">
+    <script>
+        $(function() {
+            gnbMenu(10, 0);
+        });
+    </script>
 </head>
 <body>
     <div class="wrap">
         <!-- 상단 -->
         <header class="header">
             <div class="inner">
-                <button type="button" class="btn01 btn_menu_open"><span class="blind">메뉴</span></button>
+                <button type="button" class="btn01 mo_btn_open" title="모바일 메뉴 열기" data-value="pop1"><span class="blind">메뉴 열기</span></button>
                 <a href="#none" class="logo"><span class="blind">logo</span></a>
                 <div class="id"><img src="../../images/common/img_id.png" alt=""></div>
             </div>
         </header>
         <!-- //상단 -->
+
+        <!-- 전체메뉴 -->
+        <div class="mo_gnb_wrap" data-value="pop1">
+            <div class="dim_bg"></div>
+            <div class="mo_gnb">
+                <div class="gnb_header">
+                    <h2>
+                        <div class="logo"><span class="blind">logo</span></div>
+                        <span>공덕점 샐러디 님</span>
+                    </h2>
+                    <a href="#" class="mo_btn_close"><span class="blind">닫기</span></a>
+                </div>
+                <ul class="gnb_list">
+                   <li>
+                        <a href="#none">
+                            <i><img src="../../images/common/icon_infor.svg" alt=""></i>셀프오더 안내
+                        </a>
+                   </li> 
+                   <li>
+                        <a href="#none">
+                            <i><img src="../../images/common/icon_mypage.svg" alt=""></i>마이페이지
+                        </a>
+                   </li> 
+                   <li>
+                        <a href="#none">
+                            <i><img src="../../images/common/icon_order.svg" alt=""></i>주문하기
+                        </a>
+                   </li> 
+                   <li>
+                        <a href="#none">
+                            <i><img src="../../images/common/icon_payment.svg" alt=""></i>결제수단 관리
+                        </a>
+                   </li> 
+                   <li>
+                        <a href="#none">
+                            <i><img src="../../images/common/icon_notice.svg" alt=""></i>공지사항
+                        </a>
+                   </li> 
+                   <li>
+                        <a href="#none">
+                            <i><img src="../../images/common/icon_setting.svg" alt=""></i>설정
+                        </a>
+                   </li> 
+                   <li>
+                        <a href="#none">
+                            <i><img src="../../images/common/icon_faq.svg" alt=""></i>FAQ
+                        </a>
+                   </li> 
+                </ul>
+            </div>
+            <button type="button" class="btn_logout">Log Out</button>
+        </div>
+        <!-- //전체메뉴 -->
 
         <!-- 본문내용 -->
         <main class="container main">

@@ -19,6 +19,23 @@ $(function () {
 });
 
 $(function () {
+	// 전체메뉴
+	var popup = $(".mo_gnb_wrap");
+
+    $(".mo_btn_open").on("click", function() {
+        var value = $(this).attr('data-value');
+        $('.mo_gnb_wrap[data-value='+value+']').addClass('on');
+        $("html, body").css({'height':$(window).height(), 'overflow':'hidden'});
+    });
+
+    $(".mo_btn_close").on('click', popupClose);
+    $(".mo_gnb_wrap .dim_bg").on('click', popupClose);
+    
+    function popupClose() {
+    	popup.removeClass('on');
+        $("html, body").css({'height':'auto', 'overflow':'auto'});
+    }
+
 	// 탭메뉴
 	$(".tab_wrap .tab_box li").click(function () {
 		$(".tab_wrap .tab_box li").removeClass('on');
@@ -27,6 +44,7 @@ $(function () {
 		$("#" + $(this).data('id')).addClass('on');
 	});
 });
+
 
 
 //바텀시트 핸들바
