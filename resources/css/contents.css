@@ -100,9 +100,9 @@ body{height:100%;overflow-y:scroll;}
 .store_list .text_wrap .desc dd{width:90%;margin-top:1.3889vw;}
 
 /* 매장 지도보기 */
-.location_warp{position:relative;z-index:0;}
-.location_warp #daumRoughmapContainer1646313246227{width:100vw !important;height:100vh !important;margin-top:-23vw;}
-.location_warp #daumRoughmapContainer1646313246227 .wrap_map{height:100vh !important;}
+.location_warp{margin-top:-22.7778vw;box-sizing:border-box;z-index:0;}
+.location_warp #daumRoughmapContainer1646313246227{width:100vw !important;height:100vh !important;}
+.location_warp #daumRoughmapContainer1646313246227 .wrap_map{height:100vh !important}
 
 /* 바텀시트 핸들바 */
 .bottom_sheet_dimmed{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.3);transition:all 0.3s ease-in-out;opacity:0;z-index:0;}
