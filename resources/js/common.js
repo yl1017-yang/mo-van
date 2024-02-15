@@ -48,65 +48,38 @@ $(function () {
 
 
 //바텀시트 핸들바
-const handleWrap = document.querySelector(".bottom_sheet_handle");
 const bottomSheet = document.querySelector(".bottom_sheet");
+const dimmed = document.querySelector(".bottom_sheet_dimmed");
 
 function handleSlide() {
-  bottomSheet .classList.toggle("is_active");
+	bottomSheet.classList.toggle("is_active");
 }
 function handleSlideUp() {
-  bottomSheet .classList.add("is_active");
+	bottomSheet.classList.add("is_active");
+	dimmed.classList.add("is_active");
 }
 function handleSlideDown() {
-  bottomSheet .classList.remove("is_active");
+	bottomSheet.classList.remove("is_active");
+	dimmed.classList.remove("is_active");
 }
 
-// bottomSheet .addEventListener("click", () => {
-//   handleSlideUp();
-// });
-
-let startPoint = 0;
-let endPoint = 0;
-
-// handleWrap.addEventListener("mousedown", (e) => {
-//   console.log("mousedown", e.pageY);
-//   startPoint = e.pageY;
-//   e.preventDefault();
-//   handleSlideUp();
-// });  
-// handleWrap.addEventListener("mouseup", (e) => {
-//   console.log("mouseup", e.pageY);
-//   endPoint = e.pageY;
-// });
-
-bottomSheet.addEventListener("mousedown", (e) => {
-  console.log("mousedown", e.pageY);
-  startPoint = e.pageY;
-  e.preventDefault();
-  handleSlide();
-});  
-bottomSheet.addEventListener("mouseup", (e) => {
-  console.log("mouseup", e.pageY);
-  endPoint = e.pageY;
-});
-
-
-// handleWrap.addEventListener("touchstart", (e) => {
-//   console.log("touchstart", e.touches[0].pageY);
-//   startPoint = e.touches[0].pageY;
-// });  
-// handleWrap.addEventListener("touchend", (e) => {
-//   console.log("touchend", e.changedTouches[0].pageY);
-//   endPoint = e.changedTouches[0].pageY;
-//   handleSlideUp();
-// });
+let startY = 0;
+let endY = 0;
 
 bottomSheet.addEventListener("touchstart", (e) => {
-  console.log("touchstart", e.touches[0].pageY);
-  startPoint = e.touches[0].pageY;
-});  
-bottomSheet.addEventListener("touchend", (e) => {
-  console.log("touchend", e.changedTouches[0].pageY);
-  endPoint = e.changedTouches[0].pageY;
-  handleSlide();
+	console.log("touchstart", e.touches[0].pageY);
+	startY = e.touches[0].pageY;
+});
+
+bottomSheet.addEventListener('touchend', (e) => {
+	let endY = e.changedTouches[0].clientY;
+	let deltaY = endY - startY;    
+
+	if (deltaY > 0) {
+			console.log("아래 방향으로 스와이프");
+			handleSlideDown();
+	} else if (deltaY < 0) {
+			console.log("위 방향으로 스와이프");
+			handleSlideUp();
+	}
 });
