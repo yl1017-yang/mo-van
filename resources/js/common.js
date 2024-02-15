@@ -46,40 +46,62 @@ $(function () {
 });
 
 
-
 //바텀시트 핸들바
 const bottomSheet = document.querySelector(".bottom_sheet");
 const dimmed = document.querySelector(".bottom_sheet_dimmed");
 
 function handleSlide() {
-	bottomSheet.classList.toggle("is_active");
+  bottomSheet.classList.toggle("is_active");
 }
 function handleSlideUp() {
-	bottomSheet.classList.add("is_active");
-	dimmed.classList.add("is_active");
+  bottomSheet.classList.add("is_active");
+  dimmed.classList.add("is_active");
 }
 function handleSlideDown() {
-	bottomSheet.classList.remove("is_active");
-	dimmed.classList.remove("is_active");
+  bottomSheet.classList.remove("is_active");
+  dimmed.classList.remove("is_active");
 }
 
-let startY = 0;
-let endY = 0;
+let startY;
+let endY;
+
+// bottomSheet.addEventListener("mousedown", (e) => {
+//   console.log("mousedown", e.pageY);
+//   startY = e.pageY;
+//   e.preventDefault();
+//   handleSlideUp();
+// });  
+// bottomSheet.addEventListener("mouseup", (e) => {
+//   console.log("mouseup", e.pageY);
+//   endY = e.pageY;
+// });
 
 bottomSheet.addEventListener("touchstart", (e) => {
-	console.log("touchstart", e.touches[0].pageY);
-	startY = e.touches[0].pageY;
+  console.log("touchstart", e.touches[0].pageY);
+  startY = e.touches[0].pageY;
 });
 
-bottomSheet.addEventListener('touchend', (e) => {
-	let endY = e.changedTouches[0].clientY;
-	let deltaY = endY - startY;    
+bottomSheet.addEventListener("touchmove", (e) => {
+  console.log("touchmove", e.changedTouches[0].pageY);
+  if (!startY) return;
 
-	if (deltaY > 0) {
-			console.log("아래 방향으로 스와이프");
-			handleSlideDown();
-	} else if (deltaY < 0) {
-			console.log("위 방향으로 스와이프");
-			handleSlideUp();
-	}
+  let currentY = e.changedTouches[0].pageY;
+  let deltaY = currentY - startY;
+
+  if (Math.abs(deltaY) > 50) {
+	  if (deltaY < 0) {
+		  console.log("아래로 스와이프");
+		  handleSlideUp();
+	  } else {
+		  console.log("위로 스와이프");
+		  handleSlideDown();
+	  }
+
+	  startY = null;
+  }
+});
+
+bottomSheet.addEventListener("touchend", () => {
+  startY = null;
+  console.log("touchend");
 });
