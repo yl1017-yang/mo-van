@@ -65,17 +65,6 @@ function handleSlideDown() {
 let startY;
 let endY;
 
-// bottomSheet.addEventListener("mousedown", (e) => {
-//   console.log("mousedown", e.pageY);
-//   startY = e.pageY;
-//   e.preventDefault();
-//   handleSlideUp();
-// });  
-// bottomSheet.addEventListener("mouseup", (e) => {
-//   console.log("mouseup", e.pageY);
-//   endY = e.pageY;
-// });
-
 bottomSheet.addEventListener("touchstart", (e) => {
   console.log("touchstart", e.touches[0].pageY);
   startY = e.touches[0].pageY;
