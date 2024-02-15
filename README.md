@@ -6,6 +6,7 @@ https://www.figma.com/file/wDX6ctFyIztUPq0cU8HqZ0/VAN-%EC%85%80%ED%94%84%EC%98%A
 
 ## page
 00 메인 - <a href="https://yl1017-yang.github.io/mo-van/pages/index.html" target="_blank">https://yl1017-yang.github.io/mo-van/pages/index.html</a>
+	메인 : 전체 메뉴 구현
 
 01 매장리스트:매장선택 - <a href="https://yl1017-yang.github.io/mo-van/pages/store_select.html" target="_blank">https://yl1017-yang.github.io/mo-van/pages/store_select.html</a>
 
