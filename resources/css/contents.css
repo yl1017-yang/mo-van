@@ -136,6 +136,7 @@ body{height:100%;overflow-y:scroll;}
 .detail_box dt{width:57%;padding:2.2222vw 0;}
 .detail_box dd{width:43%;text-align:right;padding:2.2222vw 0;display:flex;align-items:center;flex-direction:row-reverse;}
 .detail_box .thumb img{width:8vw;margin-right:2vw;}
+.detail_box .p_input{width:19.4444vw;height:10.4167vw;border:1px solid #B6C0CF;text-align:right;border-radius:1.1111vw;}
 
 .detail_box .num{display:flex;}
 .detail_box .sum{display:block;margin-right:2vw;color:#ddd;}
