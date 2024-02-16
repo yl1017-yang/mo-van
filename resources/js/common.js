@@ -21,7 +21,7 @@ $(function () {
 
 $(function () {
 	// 전체메뉴
-	var popup = $(".mo_gnb_wrap");
+	var popplus = $(".mo_gnb_wrap");
 
     $(".mo_btn_open").on("click", function() {
         var value = $(this).attr('data-value');
@@ -29,11 +29,11 @@ $(function () {
         $("html, body").css({'height':$(window).height(), 'overflow':'hidden'});
     });
 
-    $(".mo_btn_close").on('click', popupClose);
-    $(".mo_gnb_wrap .dim_bg").on('click', popupClose);
+    $(".mo_btn_close").on('click', popplusClose);
+    $(".mo_gnb_wrap .dim_bg").on('click', popplusClose);
     
-    function popupClose() {
-    	popup.removeClass('on');
+    function popplusClose() {
+    	popplus.removeClass('on');
         $("html, body").css({'height':'auto', 'overflow':'auto'});
     }
 
@@ -53,46 +53,49 @@ let basket = {
 	
 	//재계산
 	reCalc: function() {
-	this.totalCount = 0;
-	this.totalPrice = 10000;  //필수가격
-	document.querySelectorAll(".p_num").forEach(function(item) {
-		/* if (item.parentElement.parentElement.parentElement.previousElementSibling.firstElementChild.firstElementChild.checked == true) { */
-		var count = parseInt(item.getAttribute('value'));
-		this.totalCount += count;
-		var price = item.parentElement.previousElementSibling.firstElementChild.getAttribute('value');
-		this.totalPrice += count * price;
-		/* } */
-	}, this);
+		this.totalCount = 0;
+		this.totalPrice = 10000;  //필수가격
+		document.querySelectorAll(".p_num").forEach(function(item) {
+			/* if (item.parentElement.parentElement.parentElement.previousElementSibling.firstElementChild.firstElementChild.checked == true) { */
+			var count = parseInt(item.getAttribute('value'));
+			this.totalCount += count;
+			var price = item.parentElement.previousElementSibling.firstElementChild.getAttribute('value');
+			this.totalPrice += count * price;
+			/* } */
+		}, this);
 	},
 	
 	//화면 업데이트
-	updateUI: function() {
-	document.querySelector('#sum_p_price').textContent = this.totalPrice.formatNumber();
+	plusdateUI: function() {
+		document.querySelector('#sum_p_price').textContent = this.totalPrice.formatNumber();
 	},
 	
 	//개별 수량 변경
 	changePNum: function(pos) {
-	var item = document.querySelector('input[name=p_num' + pos + ']');
-	var p_num = parseInt(item.getAttribute('value'));
-	var newval = event.target.classList.contains('up') ? p_num + 1 : event.target.classList.contains('down') ? p_num - 1 : event.target.value;
+		var item = document.querySelector('input[name=p_num' + pos + ']');
+		var p_num = parseInt(item.getAttribute('value'));
+		var newval = event.target.classList.contains('plus') ? p_num + 1 : event.target.classList.contains('minus') ? p_num - 1 : event.target.value;
 
-	if (parseInt(newval) < 0 || parseInt(newval) > 99) {
-		return false;
-	}
+		if (parseInt(newval) < 0 || parseInt(newval) > 99) {
+			document.querySelector('.sum').classList.remove('on');
+			return false;
+		}
 
-	item.setAttribute('value', newval);
-	item.value = newval;
+		if (parseInt(newval) > 0) {
+			document.querySelector('.sum').classList.add('on');
+			// return false;
+		}
 
-	var price = item.parentElement.previousElementSibling.firstElementChild.getAttribute('value');
-	item.parentElement.nextElementSibling.textContent = (newval * price).formatNumber() + "원";
+		item.setAttribute('value', newval);
+		item.value = newval;		
 
-	this.reCalc();
-	this.updateUI();
+		var price = item.parentElement.previousElementSibling.firstElementChild.getAttribute('value');
+		item.parentElement.nextElementSibling.textContent = (newval * price).formatNumber();
+
+		this.reCalc();
+		this.plusdateUI();
+
 	},
-	// checkItem: function() {
-	//   this.reCalc();
-	//   this.updateUI();
-	// },  
 }
 
 // 숫자 3자리 콤마찍기

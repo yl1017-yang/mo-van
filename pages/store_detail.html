@@ -39,8 +39,8 @@
             <section class="detail_content">
                 <div class="inner">
 
-                    <form name="orderform" id="orderform" method="post" class="orderform" action="/" onsubmit="return false;">
-                        <div class="basketdiv" id="basket">
+                    <form name="cartform" method="post" action="/" onsubmit="return false;">
+                        <div id="basket">
                             <h3 class="detail_title">필수 옵션<span>(1개 선택)</span></h3>
                             <dl class="detail_box">
                                 <dt>곡물볼(기본)</dt>
@@ -59,23 +59,23 @@
                             <dl class="detail_box">
                                 <dt>곡물(기본 제공량의 30% 추가)</dt>
                                 <dd>
-                                    <span class="basketprice"><input type="hidden" name="p_price" id="p_price1" class="p_price" value="1000"><span class="blind">1,000원</span></span>
+                                    <span class="basketprice"><input type="hidden" name="p_price" id="p_price1" class="p_price" value="1000"><span class="blind">1,000</span></span>
                                     <span class="num">
-                                        <span onclick="javascript:basket.changePNum(1);"><i class="down"></i></span>
-                                        <input type="text" name="p_num1" id="p_num1" size="2" maxlength="4" class="p_num" value="0" onkeyup="javascript:basket.changePNum(1);">
-                                        <span onclick="javascript:basket.changePNum(1);"><i class="up"></i></span>
+                                        <span onclick="javascript:basket.changePNum(1);"><i class="minus"></i></span>
+                                        <input type="text" name="p_num1" id="p_num1" size="2" maxlength="4" class="p_num" value="0" onkeyplus="javascript:basket.changePNum(1);">
+                                        <span onclick="javascript:basket.changePNum(1);"><i class="plus"></i></span>
                                     </span>
-                                    <span class="sum">1,000원</span>
+                                    <span class="sum">1,000</span>
                                 </dd>
                                 <dt>곡물(기본 제공량의 30% 추가)</dt>
                                 <dd>
-                                    <span class="basketprice"><input type="hidden" name="p_price" id="p_price2" class="p_price" value="1000"><span class="blind">1,000원</span></span>
+                                    <span class="basketprice"><input type="hidden" name="p_price" id="p_price2" class="p_price" value="1000"><span class="blind">1,000</span></span>
                                     <span class="num">
-                                        <span onclick="javascript:basket.changePNum(2);"><i class="down"></i></span>
-                                        <input type="text" name="p_num2" id="p_num2" size="2" maxlength="4" class="p_num" value="0" onkeyup="javascript:basket.changePNum(2);">
-                                        <span onclick="javascript:basket.changePNum(2);"><i class="up"></i></span>
+                                        <span onclick="javascript:basket.changePNum(2);"><i class="minus"></i></span>
+                                        <input type="text" name="p_num2" id="p_num2" size="2" maxlength="4" class="p_num" value="0" onkeyplus="javascript:basket.changePNum(2);">
+                                        <span onclick="javascript:basket.changePNum(2);"><i class="plus"></i></span>
                                     </span>
-                                    <span class="sum">1,000원</span>
+                                    <span class="sum">1,000</span>
                                 </dd>
                                 <dt>직접 입력</dt>
                                 <dd>input box</dd>
@@ -85,63 +85,63 @@
                             <dl class="detail_box">
                                 <dt>닭가슴살 추가</dt>
                                 <dd>
-                                    <span class="basketprice"><input type="hidden" name="p_price" id="p_price3" class="p_price" value="1700"><span class="blind">1,700원</span></span>
+                                    <span class="basketprice"><input type="hidden" name="p_price" id="p_price3" class="p_price" value="1700"><span class="blind">1,700</span></span>
                                     <span class="num">
-                                        <span onclick="javascript:basket.changePNum(3);"><i class="down"></i></span>
-                                        <input type="text" name="p_num3" id="p_num3" size="2" maxlength="4" class="p_num" value="0" onkeyup="javascript:basket.changePNum(3);">
-                                        <span onclick="javascript:basket.changePNum(3);"><i class="up"></i></span>
+                                        <span onclick="javascript:basket.changePNum(3);"><i class="minus"></i></span>
+                                        <input type="text" name="p_num3" id="p_num3" size="2" maxlength="4" class="p_num" value="0" onkeyplus="javascript:basket.changePNum(3);">
+                                        <span onclick="javascript:basket.changePNum(3);"><i class="plus"></i></span>
                                     </span>
-                                    <span class="sum">1,700원</span>
+                                    <span class="sum">1,700</span>
                                 </dd>
                                 <dt>에그 추가</dt>
                                 <dd>
-                                    <span class="basketprice"><input type="hidden" name="p_price" id="p_price4" class="p_price" value="900"><span class="blind">900원</span></span>
+                                    <span class="basketprice"><input type="hidden" name="p_price" id="p_price4" class="p_price" value="900"><span class="blind">900</span></span>
                                     <span class="num">
-                                        <span onclick="javascript:basket.changePNum(4);"><i class="down"></i></span>
-                                        <input type="text" name="p_num4" id="p_num4" size="2" maxlength="4" class="p_num" value="0" onkeyup="javascript:basket.changePNum(4);">
-                                        <span onclick="javascript:basket.changePNum(4);"><i class="up"></i></span>
+                                        <span onclick="javascript:basket.changePNum(4);"><i class="minus"></i></span>
+                                        <input type="text" name="p_num4" id="p_num4" size="2" maxlength="4" class="p_num" value="0" onkeyplus="javascript:basket.changePNum(4);">
+                                        <span onclick="javascript:basket.changePNum(4);"><i class="plus"></i></span>
                                     </span>
-                                    <span class="sum">900원</span>
+                                    <span class="sum">900</span>
                                 </dd>
                                 <dt>연어 추가 (품절)</dt>
                                 <dd>
-                                    <span class="basketprice"><input type="hidden" name="p_price" id="p_price5" class="p_price" value="1700"><span class="blind">1,700원</span></span>
+                                    <span class="basketprice"><input type="hidden" name="p_price" id="p_price5" class="p_price" value="1700"><span class="blind">1,700</span></span>
                                     <span class="num">
-                                        <span onclick="javascript:basket.changePNum(5);"><i class="down"></i></span>
-                                        <input type="text" name="p_num5" id="p_num5" size="2" maxlength="4" class="p_num" value="0" onkeyup="javascript:basket.changePNum(5);">
-                                        <span onclick="javascript:basket.changePNum(5);"><i class="up"></i></span>
+                                        <span onclick="javascript:basket.changePNum(5);"><i class="minus"></i></span>
+                                        <input type="text" name="p_num5" id="p_num5" size="2" maxlength="4" class="p_num" value="0" onkeyplus="javascript:basket.changePNum(5);">
+                                        <span onclick="javascript:basket.changePNum(5);"><i class="plus"></i></span>
                                     </span>
-                                    <span class="sum">1,700원</span>
+                                    <span class="sum">1,700</span>
                                 </dd>
                                 <dt>스윗포테이토 추가 (고구마무스)</dt>
                                 <dd>
-                                    <span class="basketprice"><input type="hidden" name="p_price" id="p_price6" class="p_price" value="1200"><span class="blind">1,200원</span></span>
+                                    <span class="basketprice"><input type="hidden" name="p_price" id="p_price6" class="p_price" value="1200"><span class="blind">1,200</span></span>
                                     <span class="num">
-                                        <span onclick="javascript:basket.changePNum(6);"><i class="down"></i></span>
-                                        <input type="text" name="p_num6" id="p_num6" size="2" maxlength="4" class="p_num" value="0" onkeyup="javascript:basket.changePNum(6);">
-                                        <span onclick="javascript:basket.changePNum(6);"><i class="up"></i></span>
+                                        <span onclick="javascript:basket.changePNum(6);"><i class="minus"></i></span>
+                                        <input type="text" name="p_num6" id="p_num6" size="2" maxlength="4" class="p_num" value="0" onkeyplus="javascript:basket.changePNum(6);">
+                                        <span onclick="javascript:basket.changePNum(6);"><i class="plus"></i></span>
                                     </span>
-                                    <span class="sum">1,200원</span>
+                                    <span class="sum">1,200</span>
                                 </dd>
                                 <dt>로스트닭다리살 추가</dt>
                                 <dd>
-                                    <span class="basketprice"><input type="hidden" name="p_price" id="p_price7" class="p_price" value="3300"><span class="blind">3,300원</span></span>
+                                    <span class="basketprice"><input type="hidden" name="p_price" id="p_price7" class="p_price" value="3300"><span class="blind">3,300</span></span>
                                     <span class="num">
-                                        <span onclick="javascript:basket.changePNum(7);"><i class="down"></i></span>
-                                        <input type="text" name="p_num7" id="p_num7" size="2" maxlength="4" class="p_num" value="0" onkeyup="javascript:basket.changePNum(7);">
-                                        <span onclick="javascript:basket.changePNum(7);"><i class="up"></i></span>
+                                        <span onclick="javascript:basket.changePNum(7);"><i class="minus"></i></span>
+                                        <input type="text" name="p_num7" id="p_num7" size="2" maxlength="4" class="p_num" value="0" onkeyplus="javascript:basket.changePNum(7);">
+                                        <span onclick="javascript:basket.changePNum(7);"><i class="plus"></i></span>
                                     </span>
-                                    <span class="sum">3,300원</span>
+                                    <span class="sum">3,300</span>
                                 </dd>
                                 <dt>머쉬룸 추가</dt>
                                 <dd>
-                                    <span class="basketprice"><input type="hidden" name="p_price" id="p_price7" class="p_price" value="1700"><span class="blind">1,700원</span></span>
+                                    <span class="basketprice"><input type="hidden" name="p_price" id="p_price7" class="p_price" value="1700"><span class="blind">1,700</span></span>
                                     <span class="num">
-                                        <span onclick="javascript:basket.changePNum(8);"><i class="down"></i></span>
-                                        <input type="text" name="p_num8" id="p_num8" size="2" maxlength="4" class="p_num" value="0" onkeyup="javascript:basket.changePNum(8);">
-                                        <span onclick="javascript:basket.changePNum(8);"><i class="up"></i></span>
+                                        <span onclick="javascript:basket.changePNum(8);"><i class="minus"></i></span>
+                                        <input type="text" name="p_num8" id="p_num8" size="2" maxlength="4" class="p_num" value="0" onkeyplus="javascript:basket.changePNum(8);">
+                                        <span onclick="javascript:basket.changePNum(8);"><i class="plus"></i></span>
                                     </span>
-                                    <span class="sum">1,700원</span>
+                                    <span class="sum">1,700</span>
                                 </dd>
                                 <dt>직접 입력</dt>
                                 <dd>input box</dd>
@@ -151,7 +151,9 @@
                         <div class="btn_wrap">
                             <div class="total">
                                 <span id="sum_p_price">10,000</span>
-                                <span>plus</span>
+                                <div>
+                                    플러스 하기
+                                </div>
                             </div>
                             <a href="#none" class="btn_primary">장바구니</a>
                         </div>

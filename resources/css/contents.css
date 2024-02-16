@@ -9,7 +9,7 @@ body{height:100%;overflow-y:scroll;}
 .mt0{padding-top:0;margin-top:0;}
 
 /****************** 버튼 ******************/
-.btn01{width:10vw;height:10vw;box-shadow:0px 2px 4px 0px rgba(0,0,0,0.3);border-radius:3.3333vw;}
+.btn01{width:10vw;height:10vw;background-color:#fff !important;box-shadow:0px 2px 4px 0px rgba(0,0,0,0.3);border-radius:3.3333vw;}
 .btn02{width:10vw;height:10vw;background-color:#EBEDF1 !important;border-radius:3.3333vw;}
 .btn03{width:10vw;height:10vw;background-color:#093968 !important;border-radius:3.3333vw;}
 .btn_prev{background:url("../../images/common/icon_prev.svg") no-repeat 50% 50%/1.3889vw 2.5vw;}
@@ -134,14 +134,15 @@ body{height:100%;overflow-y:scroll;}
 
 .detail_box{display:flex;flex-wrap:wrap;justify-content:space-between;font-size:3.8889vw;font-weight:500;}
 .detail_box dt{width:57%;padding:2.2222vw 0;}
-.detail_box dd{width:43%;text-align:right;padding:2.2222vw 0;display:flex;align-items:center;}
-
-.detail_box .num input{width:6vw;text-align:center;font-weight:700;color:#093986;}
-.detail_box .num .down{display:inline-block;width:6.6667vw;height:6.6667vw;background:url("../../images/common/icon_minus_on.svg") no-repeat 0 0/100%;}
-.detail_box .num .up{display:inline-block;width:6.6667vw;height:6.6667vw;background:url("../../images/common/icon_plus_on.svg") no-repeat 0 0/100%;}
+.detail_box dd{width:43%;text-align:right;padding:2.2222vw 0;display:flex;align-items:center;flex-direction:row-reverse;}
 
 .detail_box .num{display:flex;}
-.detail_box .sum{display:block;width:16vw}
+.detail_box .sum{display:block;margin-right:2vw;color:#ddd;}
+.detail_box .sum.on{color:#093986;}
+
+.num input{width:6vw;text-align:center;font-weight:700;color:#093986;}
+.num .minus{display:inline-block;width:6.6667vw;height:6.6667vw;background:url("../../images/common/icon_minus_on.svg") no-repeat 0 0/100%;}
+.num .plus{display:inline-block;width:6.6667vw;height:6.6667vw;background:url("../../images/common/icon_plus_on.svg") no-repeat 0 0/100%;}
 
 .btn_wrap{position:fixed;bottom:0;left:0;right:0;background:#EBEDF1;padding:4.1667vw 5.5556vw;border-radius:6.6667vw 6.6667vw 0 0;z-index:5;}
 .btn_wrap .total{display:flex;justify-content:space-between;font-size:8.0556vw;font-weight:700;color:#222;margin-bottom:4.1667vw;} 
