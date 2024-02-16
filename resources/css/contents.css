@@ -135,6 +135,7 @@ body{height:100%;overflow-y:scroll;}
 .detail_box{display:flex;flex-wrap:wrap;justify-content:space-between;font-size:3.8889vw;font-weight:500;}
 .detail_box dt{width:57%;padding:2.2222vw 0;}
 .detail_box dd{width:43%;text-align:right;padding:2.2222vw 0;display:flex;align-items:center;flex-direction:row-reverse;}
+.detail_box .thumb img{width:8vw;margin-right:2vw;}
 
 .detail_box .num{display:flex;}
 .detail_box .sum{display:block;margin-right:2vw;color:#ddd;}
