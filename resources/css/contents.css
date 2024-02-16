@@ -16,6 +16,8 @@ body{height:100%;overflow-y:scroll;}
 .btn_map{background:url("../../images/common/icon_map.svg") no-repeat 50% 50%/4.7222vw 4.7222vw;}
 .btn_maplist{background:url("../../images/common/icon_maplist.svg") no-repeat 50% 50%/4.7222vw 4.7222vw;}
 
+.btn_primary{display:flex;align-items:center;justify-content:center;width:100%;height:13.8889vw;background-color:#093968 !important;border-radius:2.7778vw;font-size:5.2778vw;font-weight:700;color:#fff;}
+
 /****************** 상단 ******************/
 /* 헤더 */
 .header{position:fixed;top:0;left:0;width:100%;height:15.8333vw;background:#fff;display:flex;flex-wrap:wrap;align-content:center;z-index:10;}
@@ -116,3 +118,30 @@ body{height:100%;overflow-y:scroll;}
 .bottom_sheet_handle:after{content:'';position:absolute;top:4.1667vw;left:50%;transform:translatex(-50%);width:15.2778vw;height:1.3889vw;background:#98A8B8;border-radius:100px;} 
 .bottom_sheet .bottom_content{margin-top:9.7222vw;padding-bottom:10vw;height:100%;overflow-y:auto;box-sizing:border-box;} 
 .bottom_sheet .bottom_content .section_tab{margin-top:0;}
+
+/* 상품상세 : 상단 */
+.detail_top{margin-bottom:9.7222vw;}
+.detail_top .detail_top_img{width:100%;height:69.4444vw;overflow:hidden;border-radius:0 0 6.6667vw 6.6667vw;box-shadow:0px 0px 6px 0px rgba(0,0,0,0.3);}
+.detail_top .detail_top_title{text-align:center;margin:6.9444vw 5.5556vw 9.7222vw 5.5556vw;}
+.detail_top .detail_top_title h2{font-size:5.2778vw;font-weight:700;color:#222;margin-bottom:2.7778vw;}
+.detail_top .detail_top_title span{font-size:3.8889vw;}
+
+/* 상품상세 : 내용 */
+.detail_content{padding-bottom:45vw;}
+.detail_content .detail_title{font-size:4.7222vw;font-weight:700;color:#222;margin-top:9.7222vw;}
+.detail_content .detail_title:nth-of-type(1){margin-top:0;}
+.detail_content .detail_title span{display:inline-block;font-size:3.3333vw;color:#093968;margin:0 0 2.2222vw 1.4vw;}
+
+.detail_box{display:flex;flex-wrap:wrap;justify-content:space-between;font-size:3.8889vw;font-weight:500;}
+.detail_box dt{width:57%;padding:2.2222vw 0;}
+.detail_box dd{width:43%;text-align:right;padding:2.2222vw 0;display:flex;align-items:center;}
+
+.detail_box .num input{width:6vw;text-align:center;font-weight:700;color:#093986;}
+.detail_box .num .down{display:inline-block;width:6.6667vw;height:6.6667vw;background:url("../../images/common/icon_minus_on.svg") no-repeat 0 0/100%;}
+.detail_box .num .up{display:inline-block;width:6.6667vw;height:6.6667vw;background:url("../../images/common/icon_plus_on.svg") no-repeat 0 0/100%;}
+
+.detail_box .num{display:flex;}
+.detail_box .sum{display:block;width:16vw}
+
+.btn_wrap{position:fixed;bottom:0;left:0;right:0;background:#EBEDF1;padding:4.1667vw 5.5556vw;border-radius:6.6667vw 6.6667vw 0 0;z-index:5;}
+.btn_wrap .total{display:flex;justify-content:space-between;font-size:8.0556vw;font-weight:700;color:#222;margin-bottom:4.1667vw;} 

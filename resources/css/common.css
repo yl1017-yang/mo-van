@@ -84,10 +84,6 @@ select::-ms-expand{display:none;}
 	.ios-os select,.ios-os textarea{-webkit-appearance: none;-moz-appearance: none;appearance: none;border-radius:0;}
 }
 
-/* checkbox, radio 이미지형 */
-input[type='radio'],
-input[type='checkbox']{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;}
-
 /* input textarea focus */
 input[type='text'], input[type='password'], textarea{transition:all 0.1s ease-in-out !important;}
 /* input[type='text']:focus, input[type='password']:focus,textarea:focus{border:1px solid #555 !important;} */
@@ -103,3 +99,20 @@ input[type='text']:focus::-webkit-input-placeholder{visibility:hidden}
 input[type='text']:focus:-moz-placeholder{visibility:hidden}
 input[type='text']:focus::-moz-placeholder{visibility:hidden}
 input[type='text']:focus:-ms-input-placeholder{visibility:hidden}
+
+/* 라디오버튼 - css */
+input[type='radio']{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;}
+input[type='radio'] + label{display:inline-block;position:relative;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;}
+input[type='radio'] + label:before{content:'';display:inline-block;width:5vw;height:5vw;margin:-2px 8px 0 0;vertical-align:middle;text-align:center;background:#fff;border:2px solid #ddd;border-radius:100%;}
+input[type='radio']:checked + label:before{background:#fff;border:2px solid #093968;}
+input[type='radio']:checked + label:after{content:'';position:absolute;top:1.3vw;left:1.55vw;width:3vw;height:3vw;background:#093968;border-radius:100%;}
+input[type='radio']:disabled + label:before{background:#ddd;border:2px solid #bbb;}
+input[type='radio']:disabled + label:after{content:'';position:absolute;top:7px;left:6px;width:10px;height:10px;background:#fff;border-radius:100%;}
+
+/* 체크박스 - css */
+input[type='checkbox']{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;}
+input[type='checkbox'] + label{display:inline-block;position:relative;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;}
+input[type='checkbox'] + label:before{content:'';display:inline-block;width:5vw;height:5vw;margin:-2px 8px 0 0;vertical-align:middle;text-align:center;background:#fff;border:1px solid #ddd;border-radius:6px;}
+input[type='checkbox']:checked + label:before{content:'✔';font-size:12px;color:#fff;background:#666;border:1px solid #666;}
+input[type='checkbox']:checked:disabled + label:before{content:'✔';color:#fff;background:#ddd;border:1px solid #aaa;}
+input[type='checkbox']:disabled + label:before{cursor:not-allowed;opacity:.5;background:#ddd;}
