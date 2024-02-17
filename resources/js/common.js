@@ -64,9 +64,10 @@ let basket = {
 			this.totalPrice += count * price;
 		}, this);
 
-		// 직접 계산
-		document.querySelectorAll(".p_num_input").forEach(function(p_num_input1) {
-			this.totalCount += parseInt(p_num_input1);
+		// 직접 입력
+		document.querySelectorAll(".p_num_input").forEach(function(p_num_input) {
+			var inputPrice = parseInt(p_num_input.value);
+			this.totalPrice += inputPrice;
 		}, this);
 	},
 	
@@ -98,11 +99,8 @@ let basket = {
 	},
 
 	changePNumInput: function(pos) {
-		const p_num_input1 = document.querySelector('#p_num_input1').value;
-		document.querySelector("#result").innerText = p_num_input1;
-		
-		// 합계 계산
-		this.totalCount += parseInt(p_num_input1);
+		const p_num_input = document.querySelector('#p_num_input1').value;
+		// document.querySelector("#result").innerText = p_num_input1;
 
 		this.reCalc();
 		this.plusdateUI();

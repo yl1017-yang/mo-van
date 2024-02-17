@@ -137,7 +137,7 @@ body{height:100%;overflow-y:scroll;}
 .detail_box dt{width:57%;padding:2.2222vw 0;}
 .detail_box dd{width:43%;text-align:right;padding:2.2222vw 0;display:flex;align-items:center;flex-direction:row-reverse;}
 .detail_box .thumb img{width:8vw;margin-right:2vw;}
-.detail_box .p_input{width:19.4444vw;text-align:right;}
+.detail_box .p_num_input{width:19.4444vw;text-align:right;}
 
 .detail_box .soldout{color:#ddd;}/* pointer-events:none; */
 .detail_box .soldout .num input{color:#ddd;}
