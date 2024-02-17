@@ -48,7 +48,7 @@
                                     <input type="radio" name="basic" id="basic1" checked="checked" onclick="javascript:basket.checkItem();">
                                     <label for="basic1"></label>
                                 </dd>
-                                <dt><span class="thumb"><img src="../images/img_thumb_02.jpg" alt="" /></span> 채소볼(변경)</dt>
+                                <dt><span class="thumb"><img src="../images/img_thumb_02.jpg" alt="" /></span> 채소볼(변경) + 1,000</dt>
                                 <dd>
                                     <input type="radio" name="basic" id="basic2" onclick="javascript:basket.checkItem();">
                                     <label for="basic2"></label>
@@ -79,7 +79,7 @@
                                 </dd>
                                 <dt>직접 입력</dt>
                                 <dd>
-                                    <input type="text" name="p_num10" id="p_num10" size="10" maxlength="8" class="p_num p_input" value="" onkeyplus="javascript:basket.changePNum(10);">
+                                    <input type="text" name="p_num_input" id="p_num_input1" size="10" maxlength="8" class="p_num_input p_input input" value="" onkeyplus="javascript:basket.changePNumInput(1);">
                                 </dd>
                             </dl>
 
@@ -147,7 +147,7 @@
                                 </dd>
                                 <dt>직접 입력</dt>
                                 <dd>
-                                    <input type="text" name="p_num11" id="p_num11" size="10" maxlength="8" class="p_num p_input" value="" onkeyplus="javascript:basket.changePNum(11);">
+                                    <!-- <input type="text" name="p_num_input" id="p_num_input2" size="10" maxlength="8" class="p_num_input p_input input" value="" onkeyplus="javascript:basket.changePNumInput(2);"> -->
                                 </dd>
                             </dl>
                         </div>
@@ -156,7 +156,13 @@
                             <div class="total">
                                 <span id="sum_p_price">10,000</span>
                                 <div>
-                                    플러스 하기
+                                    <span class="basketprice"><input type="hidden" name="p_price" id="p_price10" class="p_price" value=""><span class="blind">0</span></span>
+                                    <span class="num">
+                                        <span onclick="javascript:basket.changePNum(10);"><i class="minus"></i></span>
+                                        <input type="text" name="p_num10" id="p_num10" size="2" maxlength="4" class="p_num" value="0" onkeyplus="javascript:basket.changePNum(10);">
+                                        <span onclick="javascript:basket.changePNum(10);"><i class="plus"></i></span>
+                                    </span>
+                                    <span class="sum">0</span>
                                 </div>
                             </div>
                             <a href="#none" class="btn_primary">장바구니</a>

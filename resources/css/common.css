@@ -45,8 +45,8 @@
 }
 
 /* reset */
-a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video,input,textarea,select,button{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline;box-sizing:border-box;-webkit-box-sizing:border-box;}
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;} /* vertical-align:baseline; */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
 body{font-family:'Noto Sans KR', "맑은 고딕", "malgun gothic", "Apple SD Gothic Neo", "Apple SD 산돌고딕 Neo", "Microsoft NeoGothic", sans-serif;font-weight:400;color:#666;line-height:1.3;letter-spacing:-0.0375em;word-wrap:break-word;word-break:break-all;-webkit-text-size-adjust:none;text-size-adjust:none;}
 
 /* basic tags selector */
@@ -87,6 +87,7 @@ select::-ms-expand{display:none;}
 /* input textarea focus */
 input[type='text'], input[type='password'], textarea{transition:all 0.1s ease-in-out !important;}
 /* input[type='text']:focus, input[type='password']:focus,textarea:focus{border:1px solid #555 !important;} */
+.input[type='text']{height:10.4167vw;border:1px solid #B6C0CF;border-radius:1.1111vw;padding:0 1vw;}
 
 /* placeholder, focus */
 ::placeholder{font-size:inherit;color:#999;letter-spacing:-0.0375em;opacity:1;}
@@ -103,7 +104,7 @@ input[type='text']:focus:-ms-input-placeholder{visibility:hidden}
 /* 라디오버튼 - css */
 input[type='radio']{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;}
 input[type='radio'] + label{display:inline-block;position:relative;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;}
-input[type='radio'] + label:before{content:'';display:inline-block;width:5vw;height:5vw;margin:-2px 8px 0 0;vertical-align:middle;text-align:center;background:#fff;border:2px solid #ddd;border-radius:100%;}
+input[type='radio'] + label:before{content:'';display:inline-block;width:5vw;height:5vw;margin:-0.85vw 0.97vw 0 0;vertical-align:middle;text-align:center;background:#fff;border:2px solid #ddd;border-radius:100%;}
 input[type='radio']:checked + label:before{background:#fff;border:2px solid #093968;}
 input[type='radio']:checked + label:after{content:'';position:absolute;top:1.3vw;left:1.55vw;width:3vw;height:3vw;background:#093968;border-radius:100%;}
 input[type='radio']:disabled + label:before{background:#ddd;border:2px solid #bbb;}
