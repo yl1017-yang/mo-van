@@ -67,7 +67,9 @@ let basket = {
 		// 직접 입력
 		document.querySelectorAll(".p_num_input").forEach(function(p_num_input) {
 			var inputPrice = parseInt(p_num_input.value);
-			this.totalPrice += inputPrice;
+			if (!isNaN(inputPrice)) {
+				this.totalPrice += inputPrice;
+			}
 		}, this);
 	},
 	
@@ -99,7 +101,7 @@ let basket = {
 	},
 
 	changePNumInput: function(pos) {
-		const p_num_input = document.querySelector('#p_num_input1').value;
+		const p_num_input = document.querySelector('input[name=p_num_input' + pos + ']').value;
 		// document.querySelector("#result").innerText = p_num_input1;
 
 		this.reCalc();
