@@ -63,16 +63,16 @@ let basket = {
 			var price = item.parentElement.previousElementSibling.firstElementChild.getAttribute('value');
 			this.totalPrice += count * price;
 		}, this);
+
+		// 직접 계산
+		document.querySelectorAll(".p_num_input").forEach(function(p_num_input1) {
+			this.totalCount += parseInt(p_num_input1);
+		}, this);
 	},
 	
 	//화면 업데이트
 	plusdateUI: function() {
 		document.querySelector('#sum_p_price').textContent = this.totalPrice.formatNumber();
-
-		// var sum_p_price = document.querySelector('#sum_p_price');
-		// var sum_p_price_value = parseInt(sum_p_price.textContent.replace(/,/g, ''));
-		// var new_sum_p_price_value = this.totalPrice + sum_p_price_value;
-		// sum_p_price.textContent = new_sum_p_price_value.formatNumber();
 	},
 	
 	//개별 수량 변경
@@ -92,18 +92,21 @@ let basket = {
 		item.parentElement.nextElementSibling.textContent = (newval * price).formatNumber();
 
 		console.log('newval-'+ newval, 'price-'+ price, 'item.value' + item.value, sum_p_price);
-		
-		// if (parseInt(newval) === 0) {
-		// 	document.querySelector('.sum2').textContent = price;
-		// 	return false;
-		// }
 
 		this.reCalc();
 		this.plusdateUI();
 	},
 
-	//직접 입력
+	changePNumInput: function(pos) {
+		const p_num_input1 = document.querySelector('#p_num_input1').value;
+		document.querySelector("#result").innerText = p_num_input1;
+		
+		// 합계 계산
+		this.totalCount += parseInt(p_num_input1);
 
+		this.reCalc();
+		this.plusdateUI();
+	},
 }
 
 
