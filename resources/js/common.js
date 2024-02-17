@@ -90,6 +90,11 @@ let basket = {
 		var option =document.querySelector('dd[id=option' + pos + ']');
 		//console.log("option = ",option);
 
+		// 품절 상품
+		if (option.classList.contains('soldout')) {
+			return false;
+		}
+
 		var input_num = option.querySelector('.p_num');
 		var count = parseInt(input_num.getAttribute('value'));
 		
@@ -102,8 +107,8 @@ let basket = {
 			count = count - 1;
 		} else {
 			return false;
-		}
-		
+		}		
+	
 		var span_sum = document.querySelector('span[name=p_sum' + pos + ']');
 		
 		if (parseInt(count) < 0) {

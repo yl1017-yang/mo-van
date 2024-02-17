@@ -144,6 +144,7 @@ body{height:100%;overflow-y:scroll;}
 .sum.on{color:#093986;}
 
 .num input{width:6vw;text-align:center;font-weight:700;color:#093986;}
+.num button{padding:0;}
 .num .minus{display:inline-block;width:6.6667vw;height:6.6667vw;background:url("../../images/common/icon_minus_on.svg") no-repeat 0 0/100%;}
 .num .plus{display:inline-block;width:6.6667vw;height:6.6667vw;background:url("../../images/common/icon_plus_on.svg") no-repeat 0 0/100%;}
 
