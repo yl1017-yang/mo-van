@@ -155,18 +155,18 @@
                         </div>
                         
                         <div class="btn_wrap">
-                            <div class="total">
-                                <span id="sum_p_price">10,000</span>
-                                <div class="total_num">
-                                    <span class="basketprice"><input type="hidden" name="p_price" id="sum_p_price" class="p_price" value=""><span class="blind">0</span></span>
+                            <dl class="total_wrap">
+                                <dt id="sum_p_price">10,000</dt>
+                                <dd class="total_num" name="option" id="option10">
+                                    <span class="basketprice"><input type="hidden" name="p_price" id="p_price10" class="p_price" value="0"><span class="blind">0</span></span>
                                     <span class="num">
-                                        <span onclick="javascript:basket.changePNum(10);"><i class="minus"></i></span>
+                                        <button type="button" onclick="javascript:basket.changePNum(10);"><i class="minus"></i></button>
                                         <input type="text" name="p_num10" id="p_num10" size="2" maxlength="4" class="p_num" value="0" onkeyplus="javascript:basket.changePNum(10);">
-                                        <span onclick="javascript:basket.changePNum(10);"><i class="plus"></i></span>
+                                        <button type="button" onclick="javascript:basket.changePNum(10);"><i class="plus"></i></button>
                                     </span>
-                                    <!-- <span class="sum">0</span> -->
-                                </div>
-                            </div>
+                                    <span class="sum" name="p_sum10"><span class="blind">0</span></span>
+                                </dd>
+                            </dl>
                             <a href="#none" class="btn_primary">장바구니</a>
                         </div>
                     </form>
