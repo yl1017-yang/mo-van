@@ -100,6 +100,7 @@ let basket = {
 		this.plusdateUI();
 	},
 
+	//직접 입력
 	changePNumInput: function(pos) {
 		const p_num_input = document.querySelector('input[name=p_num_input' + pos + ']').value;
 		// document.querySelector("#result").innerText = p_num_input1;
@@ -108,7 +109,6 @@ let basket = {
 		this.plusdateUI();
 	},
 }
-
 
 // 숫자 3자리 콤마찍기
 Number.prototype.formatNumber = function() {
