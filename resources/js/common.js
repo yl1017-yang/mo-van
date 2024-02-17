@@ -63,12 +63,16 @@ let basket = {
 			var price = item.parentElement.previousElementSibling.firstElementChild.getAttribute('value');
 			this.totalPrice += count * price;
 		}, this);
-
 	},
 	
 	//화면 업데이트
 	plusdateUI: function() {
 		document.querySelector('#sum_p_price').textContent = this.totalPrice.formatNumber();
+
+		// var sum_p_price = document.querySelector('#sum_p_price');
+		// var sum_p_price_value = parseInt(sum_p_price.textContent.replace(/,/g, ''));
+		// var new_sum_p_price_value = this.totalPrice + sum_p_price_value;
+		// sum_p_price.textContent = new_sum_p_price_value.formatNumber();
 	},
 	
 	//개별 수량 변경
@@ -78,13 +82,8 @@ let basket = {
 		var newval = event.target.classList.contains('plus') ? p_num + 1 : event.target.classList.contains('minus') ? p_num - 1 : event.target.value;
 
 		if (isNaN(newval) || parseInt(newval) < 0 || parseInt(newval) > 99) {
-			document.querySelector('.sum').classList.remove('on');
 			return false;
 		}
-
-		// if (parseInt(newval) > 0) {
-		// 	document.querySelector('.sum').classList.add('on');
-		// }
 
 		item.setAttribute('value', newval);
 		item.value = newval;
@@ -92,15 +91,21 @@ let basket = {
 		var price = item.parentElement.previousElementSibling.firstElementChild.getAttribute('value');
 		item.parentElement.nextElementSibling.textContent = (newval * price).formatNumber();
 
+		console.log('newval-'+ newval, 'price-'+ price, 'item.value' + item.value, sum_p_price);
+		
+		// if (parseInt(newval) === 0) {
+		// 	document.querySelector('.sum2').textContent = price;
+		// 	return false;
+		// }
+
 		this.reCalc();
 		this.plusdateUI();
 	},
 
 	//직접 입력
 
-
-
 }
+
 
 // 숫자 3자리 콤마찍기
 Number.prototype.formatNumber = function() {
