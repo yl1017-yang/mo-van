@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <title>VAN</title>
+    <link rel="stylesheet" href="../resources/css/common.css">
+    <link rel="stylesheet" href="../resources/css/contents.css">
+    <link rel="stylesheet" href="../resources/css/swiper.min.css">
+    <script>
+        $(function() {
+            gnbMenu(10, 0);
+        });
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <!-- 상단 -->
+        <header class="header">
+            <div class="inner">
+                <button type="button" class="btn01 mo_btn_open" title="모바일 메뉴 열기" data-value="pop1"><span class="blind">메뉴 열기</span></button>
+                <a href="#none" class="logo"><span class="blind">logo</span></a>
+                <div class="id"><img src="../images/common/img_id.png" alt=""></div>
+            </div>
+        </header>
+        <!-- //상단 -->
+
+        <!-- 전체메뉴 -->
+        <div class="mo_gnb_wrap" data-value="pop1">
+            <div class="dim_bg"></div>
+            <div class="mo_gnb">
+                <div class="gnb_header">
+                    <h2>
+                        <div class="logo"><span class="blind">logo</span></div>
+                        <span>공덕점 샐러디 님</span>
+                    </h2>
+                    <a href="#" class="mo_btn_close"><span class="blind">닫기</span></a>
+                </div>
+                <ul class="gnb_list">
+                   <li>
+                        <a href="#none">
+                            <i><img src="../images/common/icon_infor.svg" alt=""></i>셀프오더 안내
+                        </a>
+                   </li> 
+                   <li>
+                        <a href="#none">
+                            <i><img src="../images/common/icon_mypage.svg" alt=""></i>마이페이지
+                        </a>
+                   </li> 
+                   <li>
+                        <a href="#none">
+                            <i><img src="../images/common/icon_order.svg" alt=""></i>주문하기
+                        </a>
+                   </li> 
+                   <li>
+                        <a href="#none">
+                            <i><img src="../images/common/icon_payment.svg" alt=""></i>결제수단 관리
+                        </a>
+                   </li> 
+                   <li>
+                        <a href="#none">
+                            <i><img src="../images/common/icon_notice.svg" alt=""></i>공지사항
+                        </a>
+                   </li> 
+                   <li>
+                        <a href="#none">
+                            <i><img src="../images/common/icon_setting.svg" alt=""></i>설정
+                        </a>
+                   </li> 
+                   <li>
+                        <a href="#none">
+                            <i><img src="../images/common/icon_faq.svg" alt=""></i>FAQ
+                        </a>
+                   </li> 
+                </ul>
+            </div>
+            <button type="button" class="btn_logout">Log Out</button>
+        </div>
+        <!-- //전체메뉴 -->
+
+        <!-- 본문내용 -->
+        <main class="container main">
+            <!-- 검색 -->
+            <div class="search_wrap">
+                <form name="search" method="get" action="search.html">
+                    <fieldset>
+                        <legend>검색 폼</legend>
+                        <button type="button" title="전체검색" class="btn_search"><span class="blind">전체검색</span></button>
+                        <input type="text" name="s" value="" title="검색어를 입력" placeholder="매장명, 주소검색" class="search_result">
+                    </fieldset>
+                </form>
+            </div>
+            <!-- //검색 -->
+
+            <!-- 메인비주얼 -->
+            <section class="swiper-container slider_visual">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="../pages/store_select.html">
+                            <img src="../images/img_visual_01.jpg" alt="" />
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="../pages/store_select.html">
+                            <img src="../images/img_visual_02.jpg" alt="" />
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="../pages/store_select.html">
+                            <img src="../images/img_visual_03.jpg" alt="" />
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </section>
+            <!-- //메인비주얼 -->
+
+            <!-- 자주가는 매장 -->
+            <section class="main_favorite_store">
+                <div class="inner">
+                    <div class="sect_title">
+                        <h2>자주가는 매장</h2>
+                        <a href="#none" class="btn_view">전체보기</a>
+                    </div>
+                    <ul class="store_list">
+                        <li>
+                            <a href="../pages/store_select.html">
+                                <figure class="thumb_img">
+                                    <span class="mark on"></span>
+                                    <img src="../images/img_favorite_01.jpg" alt="" />
+                                </figure>
+                                <div class="text_wrap">
+                                    <p class="title">
+                                        <span>마포역점</span>
+                                        <span class="distance">323m</span>
+                                    </p>
+                                    <dl class="desc">
+                                        <dt><img src="../images/common/icon_tel.svg" alt="" /></dt>
+                                        <dd>02-171-1234</dd>
+                                        <dt><img src="../images/common/icon_location.svg" alt="" /></dt>
+                                        <dd>서울시 마포구 독막로 311 재화스퀘어 5층, 11층</dd>
+                                        <dt><img src="../images/common/icon_time.svg" alt="" /></dt>
+                                        <dd>주문가능시간 9:00 ~ 18:00</dd>
+                                    </dl>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../pages/store_select.html">
+                                <figure class="thumb_img">
+                                    <span class="mark"></span>
+                                    <img src="../images/img_favorite_02.jpg" alt="" />
+                                </figure>
+                                <div class="text_wrap">
+                                    <p class="title">
+                                        <span>종로점</span>
+                                        <span class="distance">1km</span>
+                                    </p>
+                                    <dl class="desc">
+                                        <dt><img src="../images/common/icon_tel.svg" alt="" /></dt>
+                                        <dd>02-171-1234</dd>
+                                        <dt><img src="../images/common/icon_location.svg" alt="" /></dt>
+                                        <dd>서울시 종로구 세종대로 12-2 세아빌딩 1층</dd>
+                                        <dt><img src="../images/common/icon_time.svg" alt="" /></dt>
+                                        <dd>주문가능시간 9:00 ~ 18:00</dd>
+                                    </dl>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- //자주가는 매장 -->
+
+            <!-- 이벤트 배너 -->
+            <section class="main_event_banner">
+                <div class="inner">
+                    <div class="sect_title">
+                        <h2>이벤트 배너</h2>
+                        <a href="#none" class="btn_view">전체보기</a>
+                    </div>
+                    <ul class="banner_list">
+                        <li>
+                            <a href="#none">
+                                <img src="../images/img_event_01.png" alt="" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <img src="../images/img_event_02.png" alt="" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- //이벤트 배너 -->
+        </main>
+        <!-- //본문내용 -->
+    </div>
+
+    <script src="../resources/js/jquery-3.4.1.js"></script>
+    <script src="../resources/js/common.js"></script>
+    <script src="../resources/js/swiper.min.js"></script>
+
+</body>
+</html>

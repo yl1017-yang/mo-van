@@ -40,7 +40,7 @@
                 <div class="inner">
 
                     <form name="cartform" method="post" action="/" onsubmit="return false;">
-                        <div id="basket">
+                        <div class="detail_wrap">
                             <h3 class="detail_title">필수 옵션<span>(1개 선택)</span></h3>
                             <dl class="detail_box">
                                 <dt><span class="thumb"><img src="../images/img_thumb_01.jpg" alt="" /></span> 곡물볼(기본)</dt>
@@ -48,7 +48,7 @@
                                     <input type="radio" name="basic" id="basic1" checked="checked" onclick="javascript:basket.checkItem();">
                                     <label for="basic1"></label>
                                 </dd>
-                                <dt><span class="thumb"><img src="../images/img_thumb_02.jpg" alt="" /></span> 채소볼(변경)</dt>
+                                <dt><span class="thumb"><img src="../images/img_thumb_02.jpg" alt="" /></span> 채소볼(변경) + 1,000</dt>
                                 <dd>
                                     <input type="radio" name="basic" id="basic2" onclick="javascript:basket.checkItem();">
                                     <label for="basic2"></label>
@@ -58,24 +58,24 @@
                             <h3 class="detail_title">사이즈업 추가<span>(0~1개 선택)</span></h3>
                             <dl class="detail_box">
                                 <dt>곡물(기본 제공량의 30% 추가)</dt>
-                                <dd name="option" id="option1">
+                                <dd>
                                     <span class="basketprice"><input type="hidden" name="p_price" id="p_price1" class="p_price" value="1000"><span class="blind">1,000</span></span>
                                     <span class="num">
                                         <span onclick="javascript:basket.changePNum(1);"><i class="minus"></i></span>
                                         <input type="text" name="p_num1" id="p_num1" size="2" maxlength="4" class="p_num" value="0" onkeyplus="javascript:basket.changePNum(1);">
                                         <span onclick="javascript:basket.changePNum(1);"><i class="plus"></i></span>
                                     </span>
-                                    <span class="sum" name="p_sum1">1,000</span>
+                                    <span class="sum">1,000</span>
                                 </dd>
                                 <dt>곡물(기본 제공량의 30% 추가)</dt>
-                                <dd name="option" id="option2">
+                                <dd>
                                     <span class="basketprice"><input type="hidden" name="p_price" id="p_price2" class="p_price" value="1000"><span class="blind">1,000</span></span>
                                     <span class="num">
                                         <span onclick="javascript:basket.changePNum(2);"><i class="minus"></i></span>
                                         <input type="text" name="p_num2" id="p_num2" size="2" maxlength="4" class="p_num" value="0" onkeyplus="javascript:basket.changePNum(2);">
                                         <span onclick="javascript:basket.changePNum(2);"><i class="plus"></i></span>
                                     </span>
-                                    <span class="sum" name="p_sum2">1,000</span>
+                                    <span class="sum">1,000</span>
                                 </dd>
                                 <dt>직접 입력</dt>
                                 <dd>
@@ -86,66 +86,66 @@
                             <h3 class="detail_title">토핑 추가<span>(0~5개 선택)</span></h3>
                             <dl class="detail_box">
                                 <dt>닭가슴살 추가</dt>
-                                <dd name="option" id="option3">
+                                <dd>
                                     <span class="basketprice"><input type="hidden" name="p_price" id="p_price3" class="p_price" value="1700"><span class="blind">1,700</span></span>
                                     <span class="num">
                                         <span onclick="javascript:basket.changePNum(3);"><i class="minus"></i></span>
                                         <input type="text" name="p_num3" id="p_num3" size="2" maxlength="4" class="p_num" value="0" onkeyplus="javascript:basket.changePNum(3);">
                                         <span onclick="javascript:basket.changePNum(3);"><i class="plus"></i></span>
                                     </span>
-                                    <span class="sum" name="p_sum3">1,700</span>
+                                    <span class="sum">1,700</span>
                                 </dd>
                                 <dt>에그 추가</dt>
-                                <dd name="option" id="option4">
+                                <dd>
                                     <span class="basketprice"><input type="hidden" name="p_price" id="p_price4" class="p_price" value="900"><span class="blind">900</span></span>
                                     <span class="num">
                                         <span onclick="javascript:basket.changePNum(4);"><i class="minus"></i></span>
                                         <input type="text" name="p_num4" id="p_num4" size="2" maxlength="4" class="p_num" value="0" onkeyplus="javascript:basket.changePNum(4);">
                                         <span onclick="javascript:basket.changePNum(4);"><i class="plus"></i></span>
                                     </span>
-                                    <span class="sum" name="p_sum4">900</span>
+                                    <span class="sum">900</span>
                                 </dd>
                                 <!-- [D]품절 상품 soldout 클래스 추가 -->
                                 <dt class="soldout">연어 추가 (품절)</dt>
-                                <dd class="soldout" name="option" id="option5">
+                                <dd class="soldout">
                                     <span class="basketprice"><input type="hidden" name="p_price" id="p_price5" class="p_price" value="1700"><span class="blind">1,700</span></span>
                                     <span class="num">
                                         <span onclick="javascript:basket.changePNum(5);"><i class="minus"></i></span>
                                         <input type="text" name="p_num5" id="p_num5" size="2" maxlength="4" class="p_num" value="0" onkeyplus="javascript:basket.changePNum(5);">
                                         <span onclick="javascript:basket.changePNum(5);"><i class="plus"></i></span>
                                     </span>
-                                    <span class="sum" name="p_sum5">1,700</span>
+                                    <span class="sum">1,700</span>
                                 </dd>
                                 <!-- //[D]품절 상품 -->
                                 <dt>스윗포테이토 추가 (고구마무스)</dt>
-                                <dd name="option" id="option6">
+                                <dd>
                                     <span class="basketprice"><input type="hidden" name="p_price" id="p_price6" class="p_price" value="1200"><span class="blind">1,200</span></span>
                                     <span class="num">
                                         <span onclick="javascript:basket.changePNum(6);"><i class="minus"></i></span>
                                         <input type="text" name="p_num6" id="p_num6" size="2" maxlength="4" class="p_num" value="0" onkeyplus="javascript:basket.changePNum(6);">
                                         <span onclick="javascript:basket.changePNum(6);"><i class="plus"></i></span>
                                     </span>
-                                    <span class="sum" name="p_sum6">1,200</span>
+                                    <span class="sum">1,200</span>
                                 </dd>
                                 <dt>로스트닭다리살 추가</dt>
-                                <dd name="option" id="option7">
+                                <dd>
                                     <span class="basketprice"><input type="hidden" name="p_price" id="p_price7" class="p_price" value="3300"><span class="blind">3,300</span></span>
                                     <span class="num">
                                         <span onclick="javascript:basket.changePNum(7);"><i class="minus"></i></span>
                                         <input type="text" name="p_num7" id="p_num7" size="2" maxlength="4" class="p_num" value="0" onkeyplus="javascript:basket.changePNum(7);">
                                         <span onclick="javascript:basket.changePNum(7);"><i class="plus"></i></span>
                                     </span>
-                                    <span class="sum" name="p_sum7">3,300</span>
+                                    <span class="sum">3,300</span>
                                 </dd>
                                 <dt>머쉬룸 추가</dt>
-                                <dd name="option" id="option8">
+                                <dd>
                                     <span class="basketprice"><input type="hidden" name="p_price" id="p_price7" class="p_price" value="1700"><span class="blind">1,700</span></span>
                                     <span class="num">
                                         <span onclick="javascript:basket.changePNum(8);"><i class="minus"></i></span>
                                         <input type="text" name="p_num8" id="p_num8" size="2" maxlength="4" class="p_num" value="0" onkeyplus="javascript:basket.changePNum(8);">
                                         <span onclick="javascript:basket.changePNum(8);"><i class="plus"></i></span>
                                     </span>
-                                    <span class="sum" name="p_sum8">1,700</span>
+                                    <span class="sum">1,700</span>
                                 </dd>
                                 <dt>직접 입력</dt>
                                 <dd>

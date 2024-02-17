@@ -1,3 +1,4 @@
+
 $(function () {
 	$(window).on('load', function () {
 		sliderVisual();
@@ -47,28 +48,25 @@ $(function () {
 
 //상품상세 수량계산
 var optiongroup = {
+	
 	list: new Array(),
 	text: ""
 }
 
-let basket = {	
+let basket = {
+	totalCount: 0,
 	totalPrice: 0, 
 	
 	//재계산
 	reCalc: function() {
-
+		this.totalCount = 0;
 		this.totalPrice = 10000;  //필수가격
-		
+
 		// 필수 옵션 계산
-		document.querySelectorAll('dd[name=option]').forEach(function(item) {
-			//console.log("item = ",item);
-
-			var input_num = item.querySelector('.p_num');
-			var count = parseInt(input_num.getAttribute('value'));
-		
-			var span_price = item.querySelector('.p_price');
-			var price = parseInt(span_price.getAttribute('value'));
-
+		document.querySelectorAll(".p_num").forEach(function(item) {
+			var count = parseInt(item.getAttribute('value'));
+			this.totalCount += count;
+			var price = item.parentElement.previousElementSibling.firstElementChild.getAttribute('value');
 			this.totalPrice += count * price;
 		}, this);
 
@@ -85,53 +83,25 @@ let basket = {
 	plusdateUI: function() {
 		document.querySelector('#sum_p_price').textContent = this.totalPrice.formatNumber();
 	},
-
+	
 	//개별 수량 변경
-	changePNum: function(pos) {		
-		var option =document.querySelector('dd[id=option' + pos + ']');		
-		//console.log("option = ",option);
-
-		var input_num = option.querySelector('.p_num');
-		var count = parseInt(input_num.getAttribute('value'));
-		
-		var span_price = option.querySelector('.p_price');
-		var price = parseInt(span_price.getAttribute('value'));
-
-		if( event.target.classList.contains('plus')) {
-			count = count+1;
-		} else if (event.target.classList.contains('minus')){
-			count = count-1;
-		} else {
-			//count = event.target.value;
+	changePNum: function(pos) {
+		var item = document.querySelector('input[name=p_num' + pos + ']');
+		var p_num = parseInt(item.getAttribute('value'));
+		var newval = event.target.classList.contains('plus') ? p_num + 1 : event.target.classList.contains('minus') ? p_num - 1 : event.target.value;
+	
+		if (isNaN(newval) || parseInt(newval) < 0 || parseInt(newval) > 99) {
 			return false;
 		}
-		
-		var span_sum = document.querySelector('span[name=p_sum' + pos + ']');
-		
-		if (parseInt(count) < 0) {
-			span_sum.classList.remove('on');
-			return false;
-		}
-		else if (parseInt(count) > 0) {
-			span_sum.classList.add('on');			
-		}
-
-		input_num.setAttribute('value', count);
-		input_num.value = count;
-		
-		var sum = 0;
-
-		if(count == 0) {
-			sum = (1*price).formatNumber();
-			span_sum.classList.remove('on');
-		}
-		else {
-			sum = (count * price).formatNumber();
-		}
-		
-		var span_sum = option.querySelector('.sum');
-		span_sum.textContent = sum;
-
+	
+		item.setAttribute('value', newval);
+		item.value = newval;
+	
+		var price = item.parentElement.previousElementSibling.firstElementChild.getAttribute('value');
+		item.parentElement.nextElementSibling.textContent = (newval * price).formatNumber();
+	
+		console.log('newval-'+ newval, 'price-'+ price, 'item.value' + item.value);
+	
 		this.reCalc();
 		this.plusdateUI();
 	},
