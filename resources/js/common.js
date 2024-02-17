@@ -45,24 +45,23 @@ $(function () {
 	});
 });
 
-//상품상세 수량계산
+
+//상품상세 수량 계산
 var optiongroup = {
 	list: new Array(),
 	text: ""
 }
 
-let basket = {	
+let basket = {
 	totalPrice: 0, 
 	
 	//재계산
 	reCalc: function() {
-
-		this.totalPrice = 10000;  //필수가격
+		this.totalPrice = 10000;  //기본가격 초기화 : 10,000 시작
 		
 		// 필수 옵션 계산
 		document.querySelectorAll('dd[name=option]').forEach(function(item) {
 			//console.log("item = ",item);
-
 			var input_num = item.querySelector('.p_num');
 			var count = parseInt(input_num.getAttribute('value'));
 		
@@ -87,8 +86,8 @@ let basket = {
 	},
 
 	//개별 수량 변경
-	changePNum: function(pos) {		
-		var option =document.querySelector('dd[id=option' + pos + ']');		
+	changePNum: function(pos) {
+		var option =document.querySelector('dd[id=option' + pos + ']');
 		//console.log("option = ",option);
 
 		var input_num = option.querySelector('.p_num');
@@ -98,11 +97,10 @@ let basket = {
 		var price = parseInt(span_price.getAttribute('value'));
 
 		if( event.target.classList.contains('plus')) {
-			count = count+1;
+			count = count + 1;
 		} else if (event.target.classList.contains('minus')){
-			count = count-1;
+			count = count - 1;
 		} else {
-			//count = event.target.value;
 			return false;
 		}
 		
@@ -113,7 +111,7 @@ let basket = {
 			return false;
 		}
 		else if (parseInt(count) > 0) {
-			span_sum.classList.add('on');			
+			span_sum.classList.add('on');
 		}
 
 		input_num.setAttribute('value', count);
@@ -122,7 +120,7 @@ let basket = {
 		var sum = 0;
 
 		if(count == 0) {
-			sum = (1*price).formatNumber();
+			sum = (1 * price).formatNumber();
 			span_sum.classList.remove('on');
 		}
 		else {
@@ -139,7 +137,6 @@ let basket = {
 	//직접 입력
 	changePNumInput: function(pos) {
 		const p_num_input = document.querySelector('input[name=p_num_input' + pos + ']').value;
-		// document.querySelector("#result").innerText = p_num_input1;
 
 		this.reCalc();
 		this.plusdateUI();
