@@ -59,7 +59,7 @@ let basket = {
 	reCalc: function() {
 		this.totalPrice = 10000;  //기본가격 초기화 : 10,000 시작
 		
-		// 필수 옵션 계산
+		// 추가 옵션
 		document.querySelectorAll('dd[name=option]').forEach(function(item) {
 			//console.log("item = ",item);
 			var input_num = item.querySelector('.p_num');
@@ -93,7 +93,22 @@ let basket = {
 		sumPrice.textContent = this.totalPrice.formatNumber();
 	},
 
-	//개별 수량 변경
+	// 필수 옵션 : 사용안함
+	checkItem: function() {
+        // var checkedItem = document.querySelector('input[name="basic"]:checked');
+        // var price = parseInt(checkedItem.dataset.price);
+        // var sumPrice = document.querySelector('#sum_p_price');
+        // var totalPrice = parseInt(sumPrice.textContent.replace(',', ''));
+
+        // if (isNaN(price) || isNaN(totalPrice)) {
+        //     return;
+        // }
+
+		// this.totalPrice = price;
+        // sumPrice.textContent = this.totalPrice.formatNumber();
+    },
+
+	// 추가 수량 변경
 	changePNum: function(pos) {
 		var option =document.querySelector('dd[id=option' + pos + ']');
 		// console.log("option = ",option);
@@ -147,7 +162,7 @@ let basket = {
 		this.plusdateUI();
 	},
 
-	//직접 입력
+	// 직접 입력
 	changePNumInput: function(pos) {
 		var p_num_input = document.querySelector('input[name=p_num_input' + pos + ']').value;
 		
