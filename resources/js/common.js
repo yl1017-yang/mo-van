@@ -83,12 +83,28 @@ let basket = {
 	//화면 업데이트
 	plusdateUI: function() {
 		document.querySelector('#sum_p_price').textContent = this.totalPrice.formatNumber();
+
+		// 합계 계산
+        var sum_p_price = document.querySelector('#sum_p_price');
+        var total_price = parseInt(sum_p_price.textContent.replace(',', ''));
+
+        // 현재 선택된 상품의 가격과 수량을 가져와서 합계를 계산합니다.
+        var p_price = parseInt(document.querySelector('#p_price').value);
+        var p_num = parseInt(document.querySelector('#p_num_total1').value);
+        var sum = parseInt(document.querySelector('.sum_total').textContent.replace(',', ''));
+
+        if (isNaN(sum) || isNaN(p_price) || isNaN(p_num)) {
+            return;
+        }
+
+        total_price += sum;
+        sum_p_price.textContent = total_price.formatNumber();
 	},
 
 	//개별 수량 변경
 	changePNum: function(pos) {
 		var option =document.querySelector('dd[id=option' + pos + ']');
-		//console.log("option = ",option);
+		// console.log("option = ",option);
 
 		// 품절 상품
 		if (option.classList.contains('soldout')) {
@@ -146,6 +162,44 @@ let basket = {
 		this.reCalc();
 		this.plusdateUI();
 	},
+
+	// 전체 수량 변경
+    changePNumTotal: function() {
+        var input_num = document.querySelector('.p_num_total');
+        var count = parseInt(input_num.getAttribute('value'));
+        var span_price = document.querySelector('#sum_p_price');
+        var price = parseInt(span_price.textContent.replace(',', ''));
+        var span_sum = document.querySelector('.sum_total');
+
+        if (event.target.classList.contains('plus')) {
+            count = count + 1;
+        } else if (event.target.classList.contains('minus')) {
+            count = count - 1;
+        } else {
+            return false;
+        }
+
+        if (parseInt(count) < 1) {
+            return false;
+        } else if (parseInt(count) > 1) {
+        }
+
+        input_num.setAttribute('value', count);
+        input_num.value = count;
+
+        var sum = 0;
+
+        if (count == 0) {
+            sum = (1 * price).formatNumber();
+        } else {
+            sum = (count * price).formatNumber();
+        }
+
+        span_sum.textContent = sum;
+
+        this.reCalc();
+        this.plusdateUI();
+    },
 }
 
 // 숫자 3자리 콤마찍기

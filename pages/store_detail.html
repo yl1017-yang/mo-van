@@ -155,19 +155,18 @@
                         </div>
                         
                         <div class="btn_wrap">
-                            <dl class="total_wrap">
-                                <dt id="sum_p_price">10,000</dt>
-                                <dd class="total_num" name="option" id="option10">
-                                    <span class="basketprice"><input type="hidden" name="p_price" id="p_price10" class="p_price" value="0"><span class="blind">0</span></span>
+                            <div class="total_wrap">
+                                <span id="sum_p_price">10,000</span>
+                                <span class="sum_total">0</span>
+                                <div class="total_num">
                                     <span class="num">
-                                        <button type="button" onclick="javascript:basket.changePNum(10);"><i class="minus"></i></button>
-                                        <input type="text" name="p_num10" id="p_num10" size="2" maxlength="4" class="p_num" value="0" onkeyplus="javascript:basket.changePNum(10);">
-                                        <button type="button" onclick="javascript:basket.changePNum(10);"><i class="plus"></i></button>
+                                        <button type="button" onclick="javascript:basket.changePNumTotal();"><i class="minus"></i></button>
+                                        <input type="text" name="p_num_total1" id="p_num_total1" size="2" maxlength="4" class="p_num_total" value="1" onkeyplus="javascript:basket.changePNumTotal();">
+                                        <button type="button" onclick="javascript:basket.changePNumTotal();"><i class="plus"></i></button>
                                     </span>
-                                    <span class="sum" name="p_sum10"><span class="blind">0</span></span>
-                                </dd>
-                            </dl>
-                            <a href="#none" class="btn_primary">장바구니</a>
+                                </div>
+                            </div>
+                            <button type="button" class="btn_primary">장바구니</button>
                         </div>
                     </form>
 
