@@ -12,11 +12,16 @@ body{height:100%;overflow-y:scroll;}
 .btn01{width:10vw;height:10vw;background-color:#fff !important;box-shadow:0px 2px 4px 0px rgba(0,0,0,0.3);border-radius:3.3333vw;}
 .btn02{width:10vw;height:10vw;background-color:#EBEDF1 !important;border-radius:3.3333vw;}
 .btn03{width:10vw;height:10vw;background-color:#093968 !important;border-radius:3.3333vw;}
+.btn_full{width:100%;}
+.btn_half{width:48% !important;}
+
+.btn_wrap{display:flex;justify-content:space-between;}
 .btn_prev{background:url("../../images/common/icon_prev.svg") no-repeat 50% 50%/1.3889vw 2.5vw;}
 .btn_map{background:url("../../images/common/icon_map.svg") no-repeat 50% 50%/4.7222vw 4.7222vw;}
 .btn_maplist{background:url("../../images/common/icon_maplist.svg") no-repeat 50% 50%/4.7222vw 4.7222vw;}
 
-.btn_primary{display:flex;align-items:center;justify-content:center;width:100%;height:13.8889vw;background-color:#093968 !important;border-radius:2.7778vw;font-size:5.2778vw;font-weight:700;color:#fff;}
+.btn_primary{display:flex;align-items:center;justify-content:center;width:100%;height:13.8889vw;background-color:#093968 !important;border-radius:2.7778vw;font-size:4.7222vw;font-weight:700;color:#fff;}
+.btn_round{display:flex;align-items:center;justify-content:center;width:100%;height:13.8889vw;background-color:#fff !important;border:1px solid #B6C0CF;border-radius:2.7778vw;font-size:4.7222vw;font-weight:700;color:#093968;}
 
 /****************** 상단 ******************/
 /* 헤더 */
@@ -153,8 +158,8 @@ body{height:100%;overflow-y:scroll;}
 .total_num .num .minus{display:block;width:6.6667vw;height:6.6667vw;background:url("../../images/common/icon_minus_white.svg") no-repeat 0 0/100%;}
 .total_num .num .plus{display:block;width:6.6667vw;height:6.6667vw;background:url("../../images/common/icon_plus_white.svg") no-repeat 0 0/100%;}
 
-.btn_wrap{position:fixed;bottom:0;left:0;right:0;background:#EBEDF1;padding:4.1667vw 5.5556vw;border-radius:6.6667vw 6.6667vw 0 0;z-index:5;}
-.btn_wrap .total_wrap{display:flex;justify-content:space-between;align-items:center;font-size:8.0556vw;font-weight:700;color:#222;margin-bottom:4.1667vw;} 
+.btn_total_wrap{position:fixed;bottom:0;left:0;right:0;background:#EBEDF1;padding:4.1667vw 5.5556vw;border-radius:6.6667vw 6.6667vw 0 0;z-index:5;}
+.btn_total_wrap .total_wrap{display:flex;justify-content:space-between;align-items:center;font-size:8.0556vw;font-weight:700;color:#222;margin-bottom:4.1667vw;} 
 
 /* 품절 */
 .detail_box .soldout{color:#ddd;}/* pointer-events:none; */
