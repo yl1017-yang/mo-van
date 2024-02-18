@@ -78,27 +78,39 @@ let basket = {
 				this.totalPrice += inputPrice;
 			}
 		}, this);
+
+		// 전체 수량 변경
+		// document.querySelectorAll(".p_num_total").forEach(function(span_sum) {
+		// 	var inputPrice = parseInt(document.querySelector('.sum_total').textContent.replace(',', ''));
+
+		// 	if (isNaN(inputPrice) || isNaN(inputPrice) || isNaN(inputPrice)) {
+        //     	return;
+        // 	}
+		// 	this.totalPrice += inputPrice;
+
+		// 	console.log(inputPrice);
+		// }, this);
 	},
 	
 	//화면 업데이트
 	plusdateUI: function() {
 		document.querySelector('#sum_p_price').textContent = this.totalPrice.formatNumber();
 
-		// 합계 계산
-        var sum_p_price = document.querySelector('#sum_p_price');
-        var total_price = parseInt(sum_p_price.textContent.replace(',', ''));
+		// 전체 수량 변경
+        // var sum_p_price = document.querySelector('#sum_p_price');
+        // var total_price = parseInt(sum_p_price.textContent.replace(',', ''));
 
-        // 현재 선택된 상품의 가격과 수량을 가져와서 합계를 계산합니다.
-        var p_price = parseInt(document.querySelector('#p_price').value);
-        var p_num = parseInt(document.querySelector('#p_num_total1').value);
-        var sum = parseInt(document.querySelector('.sum_total').textContent.replace(',', ''));
+        // // 현재 선택된 상품의 가격과 수량을 가져와서 합계를 계산합니다.
+        // var p_price = parseInt(document.querySelector('#p_price').value);
+        // var p_num = parseInt(document.querySelector('#p_num_total1').value);
+        // var sum = parseInt(document.querySelector('.sum_total').textContent.replace(',', ''));
 
-        if (isNaN(sum) || isNaN(p_price) || isNaN(p_num)) {
-            return;
-        }
+        // if (isNaN(sum) || isNaN(p_price) || isNaN(p_num)) {
+        //     return;
+        // }
 
-        total_price += sum;
-        sum_p_price.textContent = total_price.formatNumber();
+        // total_price += sum;
+        // sum_p_price.textContent = total_price.formatNumber();
 	},
 
 	//개별 수량 변경
@@ -157,7 +169,7 @@ let basket = {
 
 	//직접 입력
 	changePNumInput: function(pos) {
-		const p_num_input = document.querySelector('input[name=p_num_input' + pos + ']').value;
+		var p_num_input = document.querySelector('input[name=p_num_input' + pos + ']').value;
 
 		this.reCalc();
 		this.plusdateUI();
