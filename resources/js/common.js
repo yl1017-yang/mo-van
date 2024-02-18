@@ -95,17 +95,15 @@ let basket = {
 
 	// 필수 옵션 : 사용안함
 	checkItem: function() {
-        // var checkedItem = document.querySelector('input[name="basic"]:checked');
-        // var price = parseInt(checkedItem.dataset.price);
-        // var sumPrice = document.querySelector('#sum_p_price');
-        // var totalPrice = parseInt(sumPrice.textContent.replace(',', ''));
-
-        // if (isNaN(price) || isNaN(totalPrice)) {
-        //     return;
-        // }
-
-		// this.totalPrice = price;
-        // sumPrice.textContent = this.totalPrice.formatNumber();
+		// var totalPrice = 0;
+		// var radioButtons = document.querySelectorAll('input[name=basic]:checked');
+		// var sumPrice = document.querySelector('#sum_p_price');
+	
+		// radioButtons.forEach(function(radioButton) {
+		// 	totalPrice += parseInt(radioButton.getAttribute('data-price'));
+		// });
+	
+		// sumPrice.textContent = totalPrice.formatNumber();
     },
 
 	// 추가 수량 변경
