@@ -43,15 +43,17 @@ $(function () {
 		$(this).addClass('on');
 		$("#" + $(this).data('id')).addClass('on');
 	});
+
+	// 즐겨찾기 토글버튼
+	$(".mark").click(function (e) {
+		e.preventDefault();
+		$(this).toggleClass('on');
+	});
+
 });
 
 
 //상품상세 수량 계산
-var optiongroup = {
-	list: new Array(),
-	text: ""
-}
-
 let basket = {
 	totalPrice: 0, 
 	
