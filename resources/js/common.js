@@ -45,8 +45,7 @@ $(function () {
 	});
 
 	// 즐겨찾기 토글버튼
-	$(".mark").click(function (e) {
-		e.preventDefault();
+	$(".mark").click(function () {
 		$(this).toggleClass('on');
 	});
 

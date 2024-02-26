@@ -99,8 +99,8 @@ body{height:100%;overflow-y:scroll;}
 .store_list a{position:relative;display:flex;}
 .store_list .thumb_img{position:relative;width:27.0833vw;height:27.0833vw;margin-right:4.7222vw;border-radius:5.5556px;overflow:hidden;}
 .store_list .thumb_img img{width:100%;}
-.store_list .mark{position:absolute;top:0;left:0;width:8.2vw;height:8.2vw;background:url("../../images/common/icon_favorite_on.svg") no-repeat 50% 50%/55%;z-index:1;} /* 20240226 수정 */
-.store_list .mark.on{background:url("../../images/common/icon_favorite.svg") no-repeat 50% 50%/55%;box-shadow:0px 10px 30px 0px rgba(0,0,0,0.3);} /* 20240226 수정 */
+.store_list .mark{position:absolute;top:0;left:0;width:7.7777vw;height:7.7777vw;background:url("../../images/common/icon_favorite_on.svg") no-repeat 50% 50%/100%;z-index:1;} /* 20240226 수정 */
+.store_list .mark.on{background:url("../../images/common/icon_favorite.svg") no-repeat 50% 50%/100%;} /* 20240226 수정 */
 .store_list .text_wrap{width:56.9444vw;}
 .store_list .text_wrap .title{display:flex;justify-content:space-between;font-size:3.6111vw;font-weight:700;color:#222;}
 .store_list .text_wrap .title .distance{color:#093968;}
