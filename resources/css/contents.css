@@ -82,7 +82,8 @@ body{height:100%;overflow-y:scroll;}
 /****************** 서브 내용 ******************/
 /* 매장리스트 탭메뉴 */
 .section_tab{margin-top:6.9444vw;}
-.tab_wrap .tab_box{position:fixed;left:5.5556vw;right:5.5556vw;border-bottom:1px solid #F1F4F6;background:#fff;z-index:5;}  /* 20240226 수정 */
+.tab_wrap .tab_box{position:absolute;left:5.5556vw;right:5.5556vw;border-bottom:1px solid #F1F4F6;background:#fff;z-index:5;}  /* 20240226 수정 */
+/* .tab_wrap .tab_box.fiex{position:fixed;left:5.5556vw;right:5.5556vw;} */
 .tab_wrap .tab_box ul{display:flex;justify-content:space-between;flex-wrap:wrap;}
 .tab_wrap .tab_box li{position:relative;text-align:center;cursor:pointer;font-size:3.6111vw;color:#666;padding:0 3vw 2.7778vw 3vw;}
 .tab_wrap .tab_box li:hover,
