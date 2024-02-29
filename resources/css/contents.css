@@ -82,7 +82,7 @@ body{height:100%;overflow-y:scroll;}
 /****************** 서브 내용 ******************/
 /* 매장리스트 탭메뉴 */
 .section_tab{margin-top:6.9444vw;}
-.tab_wrap .tab_box{position:absolute;left:5.5556vw;right:5.5556vw;border-bottom:1px solid #F1F4F6;background:#fff;z-index:5;}  /* 20240226 수정 */
+.tab_wrap .tab_box{position:absolute;left:5.5556vw;right:5.5556vw;border-bottom:1px solid #F1F4F6;background:#fff;z-index:5;}
 .tab_wrap .tab_box ul{display:flex;justify-content:space-between;flex-wrap:wrap;}
 .tab_wrap .tab_box li{position:relative;text-align:center;cursor:pointer;font-size:3.6111vw;color:#666;padding:0 3vw 2.7778vw 3vw;}
 .tab_wrap .tab_box li:hover,
@@ -99,8 +99,8 @@ body{height:100%;overflow-y:scroll;}
 .store_list a{position:relative;display:flex;}
 .store_list .thumb_img{position:relative;width:27.0833vw;height:27.0833vw;margin-right:4.7222vw;border-radius:5.5556px;overflow:hidden;}
 .store_list .thumb_img img{width:100%;}
-.store_list .mark{position:absolute;top:0;left:0;width:7.7777vw;height:7.7777vw;background:url("../../images/common/icon_favorite_on.svg") no-repeat 50% 50%/100%;z-index:1;} /* 20240226 수정 */
-.store_list .mark.on{background:url("../../images/common/icon_favorite.svg") no-repeat 50% 50%/100%;} /* 20240226 수정 */
+.store_list .mark{position:absolute;top:0;left:0;width:7.7777vw;height:7.7777vw;background:url("../../images/common/icon_favorite_on.svg") no-repeat 50% 50%/100%;z-index:1;}
+.store_list .mark.on{background:url("../../images/common/icon_favorite.svg") no-repeat 50% 50%/100%;}
 .store_list .text_wrap{width:56.9444vw;}
 .store_list .text_wrap .title{display:flex;justify-content:space-between;font-size:3.6111vw;font-weight:700;color:#222;}
 .store_list .text_wrap .title .distance{color:#093968;}
