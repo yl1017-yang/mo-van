@@ -47,7 +47,7 @@
 /* reset */
 a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;} /* vertical-align:baseline; */
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
-body{font-family:"Noto Sans KR", "맑은 고딕", "malgun gothic", sans-serif;font-weight:400;color:#666;line-height:1.3;letter-spacing:-0.0375em;word-wrap:break-word;word-break:break-all;-webkit-text-size-adjust:none;text-size-adjust:none;}
+body{font-family:"Noto Sans KR", "맑은 고딕", "malgun gothic", "Apple SD Gothic Neo", "Apple SD 산돌고딕 Neo", "Microsoft NeoGothic", sans-serif;font-weight:400;color:#666;line-height:1.3;letter-spacing:-0.0375em;word-wrap:break-word;word-break:break-all;-webkit-text-size-adjust:none;text-size-adjust:none;}
 
 /* basic tags selector */
 img{max-width:100%;vertical-align:middle}
@@ -66,7 +66,7 @@ button{border:none;background:none;cursor:pointer}
 a, button, [role=button], [role=link], [role=tab]{-webkit-touch-callout:none;}
 
 /* form select */
-input,textarea,select,button{box-sizing:border-box;border:none;outline-style:none;border-radius:0;font-size:3.8889vw;font:inherit;color:inherit;}
+input,textarea,select,button{box-sizing:border-box;border:none;padding:0;outline-style:none;border-radius:0;font-size:3.8889vw;font:inherit;color:inherit;}
 input[type='text'], input[type='password']{resize:none;box-shadow:none !important;border-radius:0;outline:none;}
 input:checked{-webkit-appearance:checkbox;}
 input[type='text']::-ms-clear, input[type='tel']::-ms-clear{display:none;}
@@ -85,7 +85,7 @@ select::-ms-expand{display:none;}
 }
 
 /* input textarea focus */
-input[type='text'], input[type='password'], textarea{transition:all 0.1s ease-in-out !important;}
+/* input[type='text'], input[type='password'], textarea{transition:all 0.1s ease-in-out !important;} */
 /* input[type='text']:focus, input[type='password']:focus,textarea:focus{border:1px solid #555 !important;} */
 .input[type='text']{height:10.4167vw;border:1px solid #B6C0CF;border-radius:1.1111vw;padding:0 1vw;}
 

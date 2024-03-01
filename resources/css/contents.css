@@ -149,7 +149,7 @@ body{height:100%;overflow-y:scroll;}
 .sum{display:block;margin-right:2vw;color:#ddd;}
 .sum.on{color:#093986;font-weight:700;}
 
-.num input{width:6vw;text-align:center;font-weight:700;color:#093986;}
+.num input{width:6vw;font-size:4.1666vw;text-align:center;font-weight:700;color:#093986;}
 .num button{padding:0;}
 .num .minus{display:block;width:6.6667vw;height:6.6667vw;background:url("../../images/common/icon_minus_on.svg") no-repeat 0 0/100%;}
 .num .plus{display:block;width:6.6667vw;height:6.6667vw;background:url("../../images/common/icon_plus_on.svg") no-repeat 0 0/100%;}
